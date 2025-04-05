@@ -74,11 +74,11 @@ const About = () => {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-sage-900 text-white">
+      <section className="pt-32 pb-20 bg-primary text-white">
         <div className="container-wide">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Story</h1>
-            <p className="text-xl text-sage-100 mb-8">
+            <p className="text-xl text-white/80 mb-8">
               From humble beginnings to a leader in dehydrated food products, 
               discover the journey, values, and people behind Hare Krishna Food.
             </p>
@@ -90,16 +90,16 @@ const About = () => {
       <section className="py-16 bg-white">
         <div className="container-wide">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-sage-50 rounded-xl p-8 shadow-lg">
-              <h2 className="text-2xl font-bold mb-4 text-sage-800">Our Mission</h2>
+            <div className="bg-cream rounded-xl p-8 shadow-lg">
+              <h2 className="text-2xl font-bold mb-4 text-primary">Our Mission</h2>
               <p className="text-gray-700">
                 To provide the highest quality dehydrated food products through sustainable 
                 practices, preserving the natural goodness of fruits, vegetables, and herbs 
                 while exceeding industry standards for safety and quality.
               </p>
             </div>
-            <div className="bg-terracotta-50 rounded-xl p-8 shadow-lg">
-              <h2 className="text-2xl font-bold mb-4 text-terracotta-800">Our Vision</h2>
+            <div className="bg-cream rounded-xl p-8 shadow-lg">
+              <h2 className="text-2xl font-bold mb-4 text-primary">Our Vision</h2>
               <p className="text-gray-700">
                 To become the global leader in premium dehydrated food products, 
                 recognized for innovation, sustainability, and unwavering commitment 
@@ -111,10 +111,10 @@ const About = () => {
       </section>
       
       {/* Timeline */}
-      <section className="py-16 bg-sage-50">
+      <section className="py-16 bg-cream">
         <div className="container-wide">
           <div className="max-w-3xl mx-auto text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Journey</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary">Our Journey</h2>
             <p className="text-gray-600">
               Tracing the evolution of Hare Krishna Food from a small family business to an industry leader.
             </p>
@@ -122,7 +122,7 @@ const About = () => {
           
           <div className="relative">
             {/* Timeline Line */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-sage-300"></div>
+            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-secondary/30"></div>
             
             {/* Timeline Events */}
             <div className="space-y-12">
@@ -133,14 +133,14 @@ const About = () => {
                 >
                   <div className={`md:absolute md:w-1/2 ${index % 2 === 0 ? 'md:right-1/2 md:pr-12 text-right' : 'md:left-1/2 md:pl-12 text-left'}`}>
                     <div className={`bg-white p-6 rounded-lg shadow-md inline-block ${index % 2 === 0 ? 'md:text-right' : 'md:text-left'}`}>
-                      <span className="text-primary font-bold text-lg block mb-1">{event.year}</span>
-                      <h3 className="text-xl font-bold mb-2">{event.title}</h3>
+                      <span className="text-secondary font-bold text-lg block mb-1">{event.year}</span>
+                      <h3 className="text-xl font-bold mb-2 text-primary">{event.title}</h3>
                       <p className="text-gray-600">{event.description}</p>
                     </div>
                   </div>
                   
                   {/* Center Circle */}
-                  <div className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-primary border-4 border-white z-10"></div>
+                  <div className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-secondary border-4 border-white z-10"></div>
                 </div>
               ))}
             </div>
@@ -152,7 +152,7 @@ const About = () => {
       <section className="py-16 bg-white">
         <div className="container-wide">
           <div className="max-w-3xl mx-auto text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Leadership Team</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary">Our Leadership Team</h2>
             <p className="text-gray-600">
               Meet the dedicated professionals who guide our company with expertise and vision.
             </p>
@@ -160,15 +160,15 @@ const About = () => {
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {teamMembers.map((member, index) => (
-              <div key={index} className="bg-sage-50 rounded-lg overflow-hidden shadow-md transition-transform hover:-translate-y-1 duration-300">
+              <div key={index} className="bg-cream rounded-lg overflow-hidden shadow-md transition-transform hover:-translate-y-1 duration-300">
                 <img 
                   src={member.image} 
                   alt={member.name} 
                   className="w-full h-64 object-cover"
                 />
                 <div className="p-6">
-                  <h3 className="text-xl font-bold mb-1">{member.name}</h3>
-                  <p className="text-primary font-medium mb-3">{member.position}</p>
+                  <h3 className="text-xl font-bold mb-1 text-primary">{member.name}</h3>
+                  <p className="text-secondary font-medium mb-3">{member.position}</p>
                   <p className="text-gray-600">{member.bio}</p>
                 </div>
               </div>
@@ -178,10 +178,10 @@ const About = () => {
       </section>
       
       {/* Factory Tour */}
-      <section className="py-16 bg-sage-50">
+      <section className="py-16 bg-cream">
         <div className="container-wide">
           <div className="max-w-3xl mx-auto text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Facilities</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary">Our Facilities</h2>
             <p className="text-gray-600">
               Take a virtual tour of our state-of-the-art production facilities.
             </p>
@@ -235,17 +235,17 @@ const About = () => {
       </section>
       
       {/* CTA */}
-      <section className="py-16 bg-terracotta-500 text-white">
+      <section className="py-16 bg-secondary text-white">
         <div className="container-wide text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Partner With Us?</h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">
+          <p className="text-xl mb-8 max-w-2xl mx-auto text-white/90">
             Join the growing family of businesses that trust Hare Krishna Food for premium dehydrated products.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/products" className="btn-ghost">
               Explore Our Products
             </Link>
-            <Link to="/contact" className="bg-white text-terracotta-500 hover:bg-white/90 px-5 py-3 rounded-md font-medium shadow-md transition-all duration-300">
+            <Link to="/contact" className="bg-white text-secondary hover:bg-white/90 px-5 py-3 rounded-md font-medium shadow-md transition-all duration-300">
               Contact Us Today
             </Link>
           </div>

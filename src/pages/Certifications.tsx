@@ -1,4 +1,3 @@
-
 import { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -142,11 +141,11 @@ const Certifications = () => {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-sage-900 text-white">
+      <section className="pt-32 pb-20 bg-primary text-white">
         <div className="container-wide">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Certifications & Compliance</h1>
-            <p className="text-xl text-sage-100 mb-8">
+            <p className="text-xl text-white/80 mb-8">
               Our commitment to quality, safety, and regulatory compliance is reflected in our certifications 
               and adherence to international standards.
             </p>
@@ -158,7 +157,7 @@ const Certifications = () => {
       <section className="py-16 bg-white">
         <div className="container-wide">
           <div className="max-w-3xl mx-auto text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Certifications</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary">Our Certifications</h2>
             <p className="text-gray-600">
               We maintain the highest standards through rigorous certification processes and regular audits.
             </p>
@@ -172,13 +171,13 @@ const Certifications = () => {
                     <div className="w-16 h-16 mr-4 flex-shrink-0 flex items-center justify-center bg-white rounded shadow-sm p-2">
                       <img src={cert.logo} alt={`${cert.name} Logo`} className="max-w-full max-h-full" />
                     </div>
-                    <h3 className="text-xl font-bold">{cert.name}</h3>
+                    <h3 className="text-xl font-bold text-primary">{cert.name}</h3>
                   </div>
                   
                   <p className="text-gray-600 mb-4">{cert.description}</p>
                   
                   <details className="mb-4 group">
-                    <summary className="list-none flex items-center cursor-pointer font-medium text-primary">
+                    <summary className="list-none flex items-center cursor-pointer font-medium text-secondary">
                       <span>View Details</span>
                       <svg 
                         className="ml-2 h-5 w-5 transform transition-transform group-open:rotate-180" 
@@ -189,11 +188,11 @@ const Certifications = () => {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                       </svg>
                     </summary>
-                    <div className="mt-4 pl-4 border-l-2 border-sage-200">
+                    <div className="mt-4 pl-4 border-l-2 border-accent">
                       <ul className="space-y-2 text-gray-600">
                         {cert.details.map((detail, idx) => (
                           <li key={idx} className="flex items-start">
-                            <span className="text-primary mr-2">•</span>
+                            <span className="text-secondary mr-2">•</span>
                             <span>{detail}</span>
                           </li>
                         ))}
@@ -204,7 +203,7 @@ const Certifications = () => {
                   <div className="mt-auto">
                     <a 
                       href={cert.downloadLink} 
-                      className="inline-flex items-center text-primary hover:text-primary/80 font-medium transition-colors"
+                      className="inline-flex items-center text-secondary hover:text-secondary/80 font-medium transition-colors"
                     >
                       Download Certificate
                       <svg 
@@ -225,10 +224,10 @@ const Certifications = () => {
       </section>
       
       {/* Quality Process */}
-      <section className="py-16 bg-sage-50">
+      <section className="py-16 bg-cream">
         <div className="container-wide">
           <div className="max-w-3xl mx-auto text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Quality Assurance Process</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary">Our Quality Assurance Process</h2>
             <p className="text-gray-600">
               From raw material inspection to final product testing, quality is assured at every step.
             </p>
@@ -236,18 +235,18 @@ const Certifications = () => {
           
           <div className="relative">
             {/* Process Steps */}
-            <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-1 bg-sage-300 transform -translate-x-1/2"></div>
+            <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-1 bg-secondary/30 transform -translate-x-1/2"></div>
             
             <div className="space-y-12">
               <div className="relative flex flex-col md:flex-row md:justify-between items-center md:items-start">
                 <div className="md:w-5/12 mb-8 md:mb-0 md:pr-12 md:text-right">
-                  <h3 className="text-xl font-bold mb-2">1. Raw Material Sourcing</h3>
+                  <h3 className="text-xl font-bold mb-2 text-primary">1. Raw Material Sourcing</h3>
                   <p className="text-gray-600">
                     We select only the highest quality raw materials, working directly with trusted farmers and suppliers who share our commitment to quality.
                   </p>
                 </div>
                 
-                <div className="absolute left-1/2 transform -translate-x-1/2 md:translate-y-2 z-10 flex items-center justify-center w-12 h-12 rounded-full bg-sage-600 text-white font-bold">1</div>
+                <div className="absolute left-1/2 transform -translate-x-1/2 md:translate-y-2 z-10 flex items-center justify-center w-12 h-12 rounded-full bg-secondary text-white font-bold">1</div>
                 
                 <div className="md:w-5/12 md:pl-12">
                   <img src="https://images.unsplash.com/photo-1595850655192-fc87884c7fb1?ixlib=rb-1.2.1&auto=format&fit=crop&q=80&w=500&h=300" alt="Raw Material Sourcing" className="rounded-lg shadow-md" />
@@ -256,13 +255,13 @@ const Certifications = () => {
               
               <div className="relative flex flex-col md:flex-row-reverse md:justify-between items-center md:items-start">
                 <div className="md:w-5/12 mb-8 md:mb-0 md:pl-12">
-                  <h3 className="text-xl font-bold mb-2">2. Inspection & Washing</h3>
+                  <h3 className="text-xl font-bold mb-2 text-primary">2. Inspection & Washing</h3>
                   <p className="text-gray-600">
                     All incoming materials undergo rigorous inspection and thorough washing to ensure cleanliness and remove any foreign materials.
                   </p>
                 </div>
                 
-                <div className="absolute left-1/2 transform -translate-x-1/2 md:translate-y-2 z-10 flex items-center justify-center w-12 h-12 rounded-full bg-sage-600 text-white font-bold">2</div>
+                <div className="absolute left-1/2 transform -translate-x-1/2 md:translate-y-2 z-10 flex items-center justify-center w-12 h-12 rounded-full bg-secondary text-white font-bold">2</div>
                 
                 <div className="md:w-5/12 md:pr-12 md:text-right">
                   <img src="https://images.unsplash.com/photo-1584509172619-ef2396421d9f?ixlib=rb-1.2.1&auto=format&fit=crop&q=80&w=500&h=300" alt="Inspection & Washing" className="rounded-lg shadow-md" />
@@ -271,13 +270,13 @@ const Certifications = () => {
               
               <div className="relative flex flex-col md:flex-row md:justify-between items-center md:items-start">
                 <div className="md:w-5/12 mb-8 md:mb-0 md:pr-12 md:text-right">
-                  <h3 className="text-xl font-bold mb-2">3. Preparation & Cutting</h3>
+                  <h3 className="text-xl font-bold mb-2 text-primary">3. Preparation & Cutting</h3>
                   <p className="text-gray-600">
                     Materials are carefully prepared and cut to specification, ensuring uniformity and consistency in the final product.
                   </p>
                 </div>
                 
-                <div className="absolute left-1/2 transform -translate-x-1/2 md:translate-y-2 z-10 flex items-center justify-center w-12 h-12 rounded-full bg-sage-600 text-white font-bold">3</div>
+                <div className="absolute left-1/2 transform -translate-x-1/2 md:translate-y-2 z-10 flex items-center justify-center w-12 h-12 rounded-full bg-secondary text-white font-bold">3</div>
                 
                 <div className="md:w-5/12 md:pl-12">
                   <img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?ixlib=rb-1.2.1&auto=format&fit=crop&q=80&w=500&h=300" alt="Preparation & Cutting" className="rounded-lg shadow-md" />
@@ -286,13 +285,13 @@ const Certifications = () => {
               
               <div className="relative flex flex-col md:flex-row-reverse md:justify-between items-center md:items-start">
                 <div className="md:w-5/12 mb-8 md:mb-0 md:pl-12">
-                  <h3 className="text-xl font-bold mb-2">4. Dehydration Process</h3>
+                  <h3 className="text-xl font-bold mb-2 text-primary">4. Dehydration Process</h3>
                   <p className="text-gray-600">
                     Our controlled dehydration process ensures optimal moisture removal while preserving nutrients, flavor, and color.
                   </p>
                 </div>
                 
-                <div className="absolute left-1/2 transform -translate-x-1/2 md:translate-y-2 z-10 flex items-center justify-center w-12 h-12 rounded-full bg-sage-600 text-white font-bold">4</div>
+                <div className="absolute left-1/2 transform -translate-x-1/2 md:translate-y-2 z-10 flex items-center justify-center w-12 h-12 rounded-full bg-secondary text-white font-bold">4</div>
                 
                 <div className="md:w-5/12 md:pr-12 md:text-right">
                   <img src="https://images.unsplash.com/photo-1546069901-d5aeb1d67ca2?ixlib=rb-1.2.1&auto=format&fit=crop&q=80&w=500&h=300" alt="Dehydration Process" className="rounded-lg shadow-md" />
@@ -301,13 +300,13 @@ const Certifications = () => {
               
               <div className="relative flex flex-col md:flex-row md:justify-between items-center md:items-start">
                 <div className="md:w-5/12 mb-8 md:mb-0 md:pr-12 md:text-right">
-                  <h3 className="text-xl font-bold mb-2">5. Quality Testing</h3>
+                  <h3 className="text-xl font-bold mb-2 text-primary">5. Quality Testing</h3>
                   <p className="text-gray-600">
                     Every batch undergoes comprehensive testing for moisture content, microbiological safety, and sensory attributes.
                   </p>
                 </div>
                 
-                <div className="absolute left-1/2 transform -translate-x-1/2 md:translate-y-2 z-10 flex items-center justify-center w-12 h-12 rounded-full bg-sage-600 text-white font-bold">5</div>
+                <div className="absolute left-1/2 transform -translate-x-1/2 md:translate-y-2 z-10 flex items-center justify-center w-12 h-12 rounded-full bg-secondary text-white font-bold">5</div>
                 
                 <div className="md:w-5/12 md:pl-12">
                   <img src="https://images.unsplash.com/photo-1579165466741-7f35e4755199?ixlib=rb-1.2.1&auto=format&fit=crop&q=80&w=500&h=300" alt="Quality Testing" className="rounded-lg shadow-md" />
@@ -316,13 +315,13 @@ const Certifications = () => {
               
               <div className="relative flex flex-col md:flex-row-reverse md:justify-between items-center md:items-start">
                 <div className="md:w-5/12 mb-8 md:mb-0 md:pl-12">
-                  <h3 className="text-xl font-bold mb-2">6. Packaging & Shipping</h3>
+                  <h3 className="text-xl font-bold mb-2 text-primary">6. Packaging & Shipping</h3>
                   <p className="text-gray-600">
                     Products are carefully packaged in our clean room facility and shipped under controlled conditions to maintain quality.
                   </p>
                 </div>
                 
-                <div className="absolute left-1/2 transform -translate-x-1/2 md:translate-y-2 z-10 flex items-center justify-center w-12 h-12 rounded-full bg-sage-600 text-white font-bold">6</div>
+                <div className="absolute left-1/2 transform -translate-x-1/2 md:translate-y-2 z-10 flex items-center justify-center w-12 h-12 rounded-full bg-secondary text-white font-bold">6</div>
                 
                 <div className="md:w-5/12 md:pr-12 md:text-right">
                   <img src="https://images.unsplash.com/photo-1553413077-190dd305871c?ixlib=rb-1.2.1&auto=format&fit=crop&q=80&w=500&h=300" alt="Packaging & Shipping" className="rounded-lg shadow-md" />
@@ -337,7 +336,7 @@ const Certifications = () => {
       <section className="py-16 bg-white">
         <div className="container-wide">
           <div className="max-w-3xl mx-auto text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">International Market Compliance</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary">International Market Compliance</h2>
             <p className="text-gray-600">
               We meet regulatory requirements for key markets worldwide, ensuring smooth import procedures for our customers.
             </p>
@@ -346,12 +345,12 @@ const Certifications = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {marketCompliance.map((market, index) => (
               <div key={index} className="bg-white rounded-xl p-6 shadow-md border border-gray-100">
-                <h3 className="text-xl font-bold mb-4 text-sage-800">{market.market}</h3>
+                <h3 className="text-xl font-bold mb-4 text-primary">{market.market}</h3>
                 <ul className="space-y-2">
                   {market.requirements.map((req, idx) => (
                     <li key={idx} className="flex items-start">
                       <svg 
-                        className="h-5 w-5 text-primary mr-2 flex-shrink-0 mt-0.5" 
+                        className="h-5 w-5 text-secondary mr-2 flex-shrink-0 mt-0.5" 
                         fill="none" 
                         viewBox="0 0 24 24" 
                         stroke="currentColor"
@@ -369,16 +368,16 @@ const Certifications = () => {
       </section>
       
       {/* CTA */}
-      <section className="py-16 bg-terracotta-500 text-white">
+      <section className="py-16 bg-secondary text-white">
         <div className="container-wide text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Need Specific Certification Information?</h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">
+          <p className="text-xl mb-8 max-w-2xl mx-auto text-white/90">
             Our team can provide detailed information about our certifications and compliance 
             with specific market requirements.
           </p>
           <a 
             href="/contact" 
-            className="bg-white text-terracotta-500 hover:bg-white/90 px-8 py-3 rounded-md font-medium shadow-md inline-block transition-all duration-300"
+            className="bg-white text-secondary hover:bg-white/90 px-8 py-3 rounded-md font-medium shadow-md inline-block transition-all duration-300"
           >
             Contact Our Quality Team
           </a>

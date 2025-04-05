@@ -76,11 +76,11 @@ const Contact = () => {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-sage-900 text-white">
+      <section className="pt-32 pb-20 bg-primary text-white">
         <div className="container-wide">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Contact Us</h1>
-            <p className="text-xl text-sage-100 mb-8">
+            <p className="text-xl text-white/80 mb-8">
               Have questions or ready to discuss your dehydrated food needs? 
               Our team is here to help you find the perfect solution.
             </p>

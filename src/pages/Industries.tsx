@@ -140,11 +140,11 @@ const Industries = () => {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-sage-900 text-white">
+      <section className="pt-32 pb-20 bg-primary text-white">
         <div className="container-wide">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Industries We Serve</h1>
-            <p className="text-xl text-sage-100 mb-8">
+            <p className="text-xl text-white/80 mb-8">
               Our premium dehydrated products serve a wide range of industries, 
               each benefiting from our commitment to quality and innovation.
             </p>
@@ -153,10 +153,10 @@ const Industries = () => {
       </section>
       
       {/* Industries Grid */}
-      <section className="py-16 bg-sage-50">
+      <section className="py-16 bg-cream">
         <div className="container-wide">
           <div className="max-w-3xl mx-auto text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Tailored Solutions for Various Industries</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary">Tailored Solutions for Various Industries</h2>
             <p className="text-gray-600">
               We understand the unique requirements of different sectors and provide custom solutions to meet specific needs.
             </p>
@@ -191,13 +191,13 @@ const Industries = () => {
       
       {/* Detailed Industry Sections */}
       {industries.map((industry) => (
-        <section key={industry.id} id={`industry-${industry.id}`} className={`py-16 ${industry.id % 2 === 0 ? 'bg-white' : 'bg-sage-50'}`}>
+        <section key={industry.id} id={`industry-${industry.id}`} className={`py-16 ${industry.id % 2 === 0 ? 'bg-white' : 'bg-cream'}`}>
           <div className="container-wide">
             <div className="flex flex-col lg:flex-row gap-12 items-center">
               <div className="lg:w-1/2">
                 <div className="flex items-center mb-4">
                   <div className="text-4xl mr-4">{industry.icon}</div>
-                  <h2 className="text-3xl font-bold">{industry.name}</h2>
+                  <h2 className="text-3xl font-bold text-primary">{industry.name}</h2>
                 </div>
                 
                 <p className="text-gray-600 mb-6">
@@ -205,12 +205,12 @@ const Industries = () => {
                 </p>
                 
                 <div className="mb-6">
-                  <h3 className="text-xl font-bold mb-3 text-sage-700">Key Benefits</h3>
+                  <h3 className="text-xl font-bold mb-3 text-secondary">Key Benefits</h3>
                   <ul className="space-y-2">
                     {industry.benefits.map((benefit, index) => (
                       <li key={index} className="flex items-start">
                         <svg 
-                          className="h-5 w-5 text-primary mr-2 flex-shrink-0 mt-0.5" 
+                          className="h-5 w-5 text-secondary mr-2 flex-shrink-0 mt-0.5" 
                           fill="none" 
                           viewBox="0 0 24 24" 
                           stroke="currentColor"
@@ -224,12 +224,12 @@ const Industries = () => {
                 </div>
                 
                 <div>
-                  <h3 className="text-xl font-bold mb-3 text-sage-700">Popular Products</h3>
+                  <h3 className="text-xl font-bold mb-3 text-secondary">Popular Products</h3>
                   <ul className="space-y-2">
                     {industry.products.map((product, index) => (
                       <li key={index} className="flex items-start">
                         <svg 
-                          className="h-5 w-5 text-primary mr-2 flex-shrink-0 mt-0.5" 
+                          className="h-5 w-5 text-secondary mr-2 flex-shrink-0 mt-0.5" 
                           fill="none" 
                           viewBox="0 0 24 24" 
                           stroke="currentColor"
@@ -245,7 +245,7 @@ const Industries = () => {
                 <div className="mt-8">
                   <a 
                     href="/contact" 
-                    className="inline-flex items-center text-primary font-medium group transition-all"
+                    className="inline-flex items-center text-secondary font-medium group transition-all"
                   >
                     Discuss Your Specific Requirements
                     <svg 
@@ -273,17 +273,17 @@ const Industries = () => {
       ))}
       
       {/* Success Stories */}
-      <section className="py-16 bg-sage-800 text-white">
+      <section className="py-16 bg-primary text-white">
         <div className="container-wide">
           <div className="max-w-3xl mx-auto text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Success Stories</h2>
-            <p className="text-sage-200">
+            <p className="text-white/80">
               See how our dehydrated products have helped businesses across different industries.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-sage-700/50 rounded-xl p-8">
+            <div className="bg-secondary/50 rounded-xl p-8">
               <div className="flex items-center mb-4">
                 <img 
                   src="https://randomuser.me/api/portraits/men/32.jpg" 
@@ -292,21 +292,21 @@ const Industries = () => {
                 />
                 <div>
                   <h3 className="font-bold">GreenBite Foods</h3>
-                  <p className="text-sage-300">Food Manufacturer</p>
+                  <p className="text-white/70">Food Manufacturer</p>
                 </div>
               </div>
               <blockquote className="italic mb-4">
                 "Hare Krishna Food's dehydrated vegetable ingredients have allowed us to develop a line of clean-label, shelf-stable snacks that maintain their vibrant colors and flavors. Their consistent quality has been a key factor in our product success."
               </blockquote>
               <div className="flex justify-between items-center">
-                <span className="text-sage-300">Results:</span>
-                <span className="bg-sage-600 text-white px-3 py-1 rounded-full text-sm">
+                <span className="text-white/70">Results:</span>
+                <span className="bg-accent text-primary px-3 py-1 rounded-full text-sm font-medium">
                   30% Growth in Product Line
                 </span>
               </div>
             </div>
             
-            <div className="bg-sage-700/50 rounded-xl p-8">
+            <div className="bg-secondary/50 rounded-xl p-8">
               <div className="flex items-center mb-4">
                 <img 
                   src="https://randomuser.me/api/portraits/women/44.jpg" 
@@ -315,15 +315,15 @@ const Industries = () => {
                 />
                 <div>
                   <h3 className="font-bold">VitaWell Supplements</h3>
-                  <p className="text-sage-300">Nutraceutical Brand</p>
+                  <p className="text-white/70">Nutraceutical Brand</p>
                 </div>
               </div>
               <blockquote className="italic mb-4">
                 "The consistent potency and purity of Hare Krishna Food's herb powders have allowed us to develop premium supplements with reliable efficacy. Their documentation and traceability also help us meet regulatory requirements."
               </blockquote>
               <div className="flex justify-between items-center">
-                <span className="text-sage-300">Results:</span>
-                <span className="bg-sage-600 text-white px-3 py-1 rounded-full text-sm">
+                <span className="text-white/70">Results:</span>
+                <span className="bg-accent text-primary px-3 py-1 rounded-full text-sm font-medium">
                   Expanded to 12 New Markets
                 </span>
               </div>
@@ -333,10 +333,10 @@ const Industries = () => {
       </section>
       
       {/* CTA */}
-      <section className="py-16 bg-terracotta-500 text-white">
+      <section className="py-16 bg-secondary text-white">
         <div className="container-wide text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Discuss Your Industry Needs?</h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">
+          <p className="text-xl mb-8 max-w-2xl mx-auto text-white/90">
             Our experts can help you find the perfect dehydrated ingredients solution for your specific application.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -348,7 +348,7 @@ const Industries = () => {
             </a>
             <a 
               href="/contact" 
-              className="bg-white text-terracotta-500 hover:bg-white/90 px-5 py-3 rounded-md font-medium shadow-md transition-all duration-300"
+              className="bg-white text-secondary hover:bg-white/90 px-5 py-3 rounded-md font-medium shadow-md transition-all duration-300"
             >
               Schedule a Consultation
             </a>
