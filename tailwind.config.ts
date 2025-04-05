@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -25,11 +26,11 @@ export default {
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				primary: {
-					DEFAULT: '#213555', // Updated primary color
+					DEFAULT: '#213555', // Primary color
 					foreground: 'hsl(var(--primary-foreground))'
 				},
 				secondary: {
-					DEFAULT: '#3E5879', // Updated secondary color
+					DEFAULT: '#3E5879', // Secondary color
 					foreground: 'hsl(var(--secondary-foreground))'
 				},
 				destructive: {
@@ -41,7 +42,7 @@ export default {
 					foreground: 'hsl(var(--muted-foreground))'
 				},
 				accent: {
-					DEFAULT: '#D8C4B6', // Updated accent color
+					DEFAULT: '#D8C4B6', // Accent color
 					foreground: 'hsl(var(--accent-foreground))'
 				},
 				popover: {
@@ -52,6 +53,7 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				cream: '#F5EFE7', // Base/Light background color
 				sage: {
 					50: '#f5f8f5',
 					100: '#e6ede6',
@@ -78,8 +80,7 @@ export default {
 					900: '#6c322c',
 					950: '#3a1713',
 				},
-				highlight: '#3E5879', // Updated highlight color
-				cream: '#F5EFE7', // Updated cream/light background color
+				highlight: '#3E5879', // Using secondary color as highlight
 			},
 			fontFamily: {
 				sans: ['Poppins', 'sans-serif'],

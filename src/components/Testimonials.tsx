@@ -53,11 +53,11 @@ const Testimonials = () => {
   }, []);
   
   return (
-    <section className="py-16 bg-sage-900 text-white">
+    <section className="py-16 bg-primary text-white">
       <div className="container-wide">
         <div className="max-w-3xl mx-auto text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">What Our Clients Say</h2>
-          <p className="text-sage-200">
+          <p className="text-white/80">
             We take pride in the relationships we've built with food manufacturers and distributors worldwide.
           </p>
         </div>
@@ -67,7 +67,7 @@ const Testimonials = () => {
             {testimonials.map((testimonial, index) => (
               <div 
                 key={testimonial.id}
-                className={`absolute inset-0 transition-all duration-500 flex flex-col md:flex-row gap-8 items-center bg-sage-800/50 rounded-xl p-8 ${
+                className={`absolute inset-0 transition-all duration-500 flex flex-col md:flex-row gap-8 items-center bg-secondary/50 rounded-xl p-8 ${
                   index === activeIndex 
                     ? 'opacity-100 translate-x-0 z-10' 
                     : 'opacity-0 translate-x-full z-0'
@@ -78,7 +78,7 @@ const Testimonials = () => {
                     <img 
                       src={testimonial.image} 
                       alt={testimonial.name} 
-                      className="w-20 h-20 rounded-full mx-auto object-cover border-2 border-primary"
+                      className="w-20 h-20 rounded-full mx-auto object-cover border-2 border-accent"
                     />
                   ) : (
                     <div className="w-20 h-20 rounded-full mx-auto bg-primary flex items-center justify-center text-2xl font-bold">
@@ -110,7 +110,7 @@ const Testimonials = () => {
                   
                   <div>
                     <h4 className="font-bold">{testimonial.name}</h4>
-                    <p className="text-sage-300">{testimonial.company}</p>
+                    <p className="text-white/70">{testimonial.company}</p>
                   </div>
                 </div>
               </div>
@@ -123,7 +123,7 @@ const Testimonials = () => {
                 key={index}
                 onClick={() => setActiveIndex(index)}
                 className={`w-3 h-3 rounded-full ${
-                  index === activeIndex ? 'bg-primary' : 'bg-sage-600'
+                  index === activeIndex ? 'bg-accent' : 'bg-white/30'
                 }`}
                 aria-label={`Go to testimonial ${index + 1}`}
               />
