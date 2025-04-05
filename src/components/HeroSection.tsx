@@ -13,31 +13,26 @@ const HeroSection = () => {
 
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
-      {/* Video Background */}
+      {/* Background Image with Overlay */}
       <div className="absolute inset-0 w-full h-full">
-        <div className="absolute inset-0 bg-black/50 z-10"></div>
-        <video 
+        <div className="absolute inset-0 bg-primary/70 z-10"></div>
+        <img 
+          src="https://images.unsplash.com/photo-1573246123716-6b1782bfc499?ixlib=rb-1.2.1&auto=format&fit=crop&q=85&w=2000&h=1200"
+          alt="Dehydrated food ingredients" 
           className="w-full h-full object-cover"
-          autoPlay 
-          loop 
-          muted 
-          playsInline
-        >
-          <source src="https://static.videezy.com/system/resources/previews/000/044/604/original/Drying-food-ingredients.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+        />
       </div>
       
       {/* Content */}
       <div className="container-wide relative z-20 text-white text-center">
         <div className="max-w-4xl mx-auto px-4">
-          <div className="inline-block mb-6 bg-primary/20 backdrop-blur-sm px-6 py-2 rounded-full animate-slide-in">
+          <div className="inline-block mb-6 bg-secondary/30 backdrop-blur-sm px-6 py-2 rounded-full animate-slide-in">
             <span className="text-white/90 font-medium">Premium Quality Dehydrated Products</span>
           </div>
           
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight animate-fade-in">
             Delivering Nature's Goodness – <br />
-            <span className="text-highlight">One Dehydrated Slice at a Time</span>
+            <span className="text-accent">One Dehydrated Slice at a Time</span>
           </h1>
           
           <p className="text-lg md:text-xl mb-10 max-w-2xl mx-auto animate-fade-in opacity-90">

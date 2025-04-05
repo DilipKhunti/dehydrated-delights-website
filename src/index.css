@@ -12,32 +12,32 @@
   
   :root {
     --background: 0 0% 100%;
-    --foreground: 20 14% 4%;
+    --foreground: 220 40% 23%;
 
     --card: 0 0% 100%;
-    --card-foreground: 20 14% 4%;
+    --card-foreground: 220 40% 23%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 20 14% 4%;
+    --popover-foreground: 220 40% 23%;
 
-    --primary: 142 33% 46%;
+    --primary: 220 45% 23%;
     --primary-foreground: 355 100% 100%;
 
-    --secondary: 20 60% 55%;
+    --secondary: 216 35% 36%;
     --secondary-foreground: 355 100% 100%;
 
     --muted: 60 4.8% 95.9%;
     --muted-foreground: 25 5.3% 44.7%;
 
-    --accent: 142 30% 94%;
-    --accent-foreground: 142 50% 16%;
+    --accent: 27 28% 74%;
+    --accent-foreground: 27 50% 25%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 20 5.9% 90%;
-    --input: 20 5.9% 90%;
-    --ring: 142 33% 46%;
+    --border: 220 10% 85%;
+    --input: 220 10% 85%;
+    --ring: 216 35% 36%;
 
     --radius: 0.5rem;
   }
@@ -94,7 +94,7 @@
   }
   
   .btn-highlight {
-    @apply bg-highlight text-white hover:bg-highlight/90 px-5 py-3 rounded-md font-medium shadow-md transition-all duration-300 flex items-center justify-center gap-2;
+    @apply bg-accent text-primary hover:bg-accent/90 px-5 py-3 rounded-md font-medium shadow-md transition-all duration-300 flex items-center justify-center gap-2;
   }
   
   .card-hover {

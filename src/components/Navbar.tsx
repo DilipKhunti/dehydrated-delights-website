@@ -26,13 +26,9 @@ const Navbar = () => {
       <div className="container-wide flex items-center justify-between">
         <Link to="/" className="flex items-center space-x-2">
           <img 
-            src="/logo.png" 
+            src="/lovable-uploads/ecff1123-e2bc-4393-83db-e545834059ad.png" 
             alt="Hare Krishna Food" 
-            className="h-10 md:h-12" 
-            onError={(e) => {
-              // Fallback if logo doesn't exist yet
-              e.currentTarget.src = 'https://via.placeholder.com/120x40?text=Logo';
-            }}
+            className="h-14 md:h-16" 
           />
         </Link>
 
@@ -40,42 +36,42 @@ const Navbar = () => {
         <nav className="hidden md:flex items-center space-x-6">
           <Link 
             to="/" 
-            className="font-medium hover:text-primary transition-colors flex items-center gap-1"
+            className={`font-medium hover:text-secondary transition-colors flex items-center gap-1 ${isScrolled ? 'text-primary' : 'text-white'}`}
           >
             <Home size={18} />
             <span>Home</span>
           </Link>
           <Link 
             to="/about" 
-            className="font-medium hover:text-primary transition-colors flex items-center gap-1"
+            className={`font-medium hover:text-secondary transition-colors flex items-center gap-1 ${isScrolled ? 'text-primary' : 'text-white'}`}
           >
             <Users size={18} />
             <span>About Us</span>
           </Link>
           <Link 
             to="/products" 
-            className="font-medium hover:text-primary transition-colors flex items-center gap-1"
+            className={`font-medium hover:text-secondary transition-colors flex items-center gap-1 ${isScrolled ? 'text-primary' : 'text-white'}`}
           >
             <ShoppingBag size={18} />
             <span>Products</span>
           </Link>
           <Link 
             to="/certifications" 
-            className="font-medium hover:text-primary transition-colors flex items-center gap-1"
+            className={`font-medium hover:text-secondary transition-colors flex items-center gap-1 ${isScrolled ? 'text-primary' : 'text-white'}`}
           >
             <Award size={18} />
             <span>Certifications</span>
           </Link>
           <Link 
             to="/industries" 
-            className="font-medium hover:text-primary transition-colors flex items-center gap-1"
+            className={`font-medium hover:text-secondary transition-colors flex items-center gap-1 ${isScrolled ? 'text-primary' : 'text-white'}`}
           >
             <Factory size={18} />
             <span>Industries</span>
           </Link>
           <Link 
             to="/contact" 
-            className="font-medium hover:text-primary transition-colors flex items-center gap-1"
+            className={`font-medium hover:text-secondary transition-colors flex items-center gap-1 ${isScrolled ? 'text-primary' : 'text-white'}`}
           >
             <Phone size={18} />
             <span>Contact</span>
@@ -87,7 +83,7 @@ const Navbar = () => {
           variant="ghost"
           size="icon"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="md:hidden text-foreground"
+          className={`md:hidden ${isScrolled ? 'text-primary' : 'text-white'}`}
           aria-label="Toggle menu"
         >
           {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -99,7 +95,7 @@ const Navbar = () => {
         <nav className="md:hidden bg-white shadow-lg absolute top-full left-0 right-0 py-4 px-6 flex flex-col space-y-4 animate-fade-in">
           <Link 
             to="/" 
-            className="font-medium hover:text-primary transition-colors py-2 flex items-center gap-2"
+            className="font-medium hover:text-secondary transition-colors py-2 flex items-center gap-2"
             onClick={() => setIsMenuOpen(false)}
           >
             <Home size={18} />
@@ -107,7 +103,7 @@ const Navbar = () => {
           </Link>
           <Link 
             to="/about" 
-            className="font-medium hover:text-primary transition-colors py-2 flex items-center gap-2"
+            className="font-medium hover:text-secondary transition-colors py-2 flex items-center gap-2"
             onClick={() => setIsMenuOpen(false)}
           >
             <Users size={18} />
@@ -115,7 +111,7 @@ const Navbar = () => {
           </Link>
           <Link 
             to="/products" 
-            className="font-medium hover:text-primary transition-colors py-2 flex items-center gap-2"
+            className="font-medium hover:text-secondary transition-colors py-2 flex items-center gap-2"
             onClick={() => setIsMenuOpen(false)}
           >
             <ShoppingBag size={18} />
@@ -123,7 +119,7 @@ const Navbar = () => {
           </Link>
           <Link 
             to="/certifications" 
-            className="font-medium hover:text-primary transition-colors py-2 flex items-center gap-2"
+            className="font-medium hover:text-secondary transition-colors py-2 flex items-center gap-2"
             onClick={() => setIsMenuOpen(false)}
           >
             <Award size={18} />
@@ -131,7 +127,7 @@ const Navbar = () => {
           </Link>
           <Link 
             to="/industries" 
-            className="font-medium hover:text-primary transition-colors py-2 flex items-center gap-2"
+            className="font-medium hover:text-secondary transition-colors py-2 flex items-center gap-2"
             onClick={() => setIsMenuOpen(false)}
           >
             <Factory size={18} />
@@ -139,7 +135,7 @@ const Navbar = () => {
           </Link>
           <Link 
             to="/contact" 
-            className="font-medium hover:text-primary transition-colors py-2 flex items-center gap-2"
+            className="font-medium hover:text-secondary transition-colors py-2 flex items-center gap-2"
             onClick={() => setIsMenuOpen(false)}
           >
             <Phone size={18} />

@@ -12,9 +12,9 @@ const FounderMessage = () => {
                 className="h-full w-full object-cover"
               />
             </div>
-            <div className="absolute -bottom-6 -right-6 bg-sage-100 rounded-xl p-8 shadow-lg w-48 h-48 flex items-center justify-center">
+            <div className="absolute -bottom-6 -right-6 bg-accent rounded-xl p-8 shadow-lg w-48 h-48 flex items-center justify-center">
               <img
-                src="https://cdn.pixabay.com/photo/2016/06/13/07/59/pi-1453836_1280.png"
+                src="/lovable-uploads/ecff1123-e2bc-4393-83db-e545834059ad.png"
                 alt="Company Logo"
                 className="max-w-full max-h-full"
               />
@@ -22,8 +22,8 @@ const FounderMessage = () => {
           </div>
           
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Founder's Message</h2>
-            <div className="bg-sage-50 rounded-lg p-6 mb-6 border-l-4 border-primary italic">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary">Our Founder's Message</h2>
+            <div className="bg-cream rounded-lg p-6 mb-6 border-l-4 border-secondary italic">
               <p className="text-xl leading-relaxed text-gray-700">
                 "At Hare Krishna Food, we blend tradition with technology to preserve nature's bounty at its peak. 
                 Our commitment to quality and sustainability drives everything we do, from sourcing the finest raw materials 
@@ -42,13 +42,13 @@ const FounderMessage = () => {
                 className="w-16 h-16 rounded-full object-cover"
               />
               <div>
-                <h3 className="font-bold">Krishna Patel</h3>
+                <h3 className="font-bold text-primary">Krishna Patel</h3>
                 <p className="text-gray-500">Founder & CEO</p>
               </div>
             </div>
             <a 
               href="/about" 
-              className="inline-flex items-center text-primary font-medium group transition-all"
+              className="inline-flex items-center text-secondary font-medium group transition-all"
             >
               Read Our Story
               <svg 

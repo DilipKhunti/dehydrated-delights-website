@@ -26,10 +26,10 @@ const CategoryCard = ({ title, icon, description, link, image }: CategoryCardPro
           className="w-full h-full object-cover transition-transform duration-700"
           style={{
             transform: isHovered ? 'scale(1.1)' : 'scale(1)',
-            opacity: 0.6,
+            opacity: 0.7,
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/10"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/50 to-primary/10"></div>
       </div>
       
       <div className="relative z-10 p-6 flex flex-col h-full justify-between">
@@ -41,7 +41,7 @@ const CategoryCard = ({ title, icon, description, link, image }: CategoryCardPro
         
         <Link 
           to={link} 
-          className="inline-flex items-center text-white font-medium mt-4 group transition-all"
+          className="inline-flex items-center text-accent font-medium mt-4 group transition-all"
         >
           Explore Products
           <svg 
@@ -60,10 +60,10 @@ const CategoryCard = ({ title, icon, description, link, image }: CategoryCardPro
 
 const ProductCategories = () => {
   return (
-    <section className="py-20 bg-sage-50">
+    <section className="py-20 bg-cream">
       <div className="container-wide">
         <div className="max-w-3xl mx-auto text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Premium Product Categories</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary">Our Premium Product Categories</h2>
           <p className="text-gray-600">
             Explore our wide range of high-quality dehydrated products, meticulously processed to preserve nutrients and flavor.
           </p>
