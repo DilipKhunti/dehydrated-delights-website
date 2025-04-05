@@ -1,7 +1,8 @@
 
 import { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ShoppingBag, Phone, Home, Users, FileText, Award, Factory } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { Button } from './ui/button';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -24,40 +25,73 @@ const Navbar = () => {
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-4'}`}>
       <div className="container-wide flex items-center justify-between">
         <Link to="/" className="flex items-center space-x-2">
-          <span className="text-xl md:text-2xl font-serif font-bold text-primary">
-            Hare Krishna Food
-          </span>
+          <img 
+            src="/logo.png" 
+            alt="Hare Krishna Food" 
+            className="h-10 md:h-12" 
+            onError={(e) => {
+              // Fallback if logo doesn't exist yet
+              e.currentTarget.src = 'https://via.placeholder.com/120x40?text=Logo';
+            }}
+          />
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-8">
-          <Link to="/" className="font-medium hover:text-primary transition-colors">
-            Home
+        <nav className="hidden md:flex items-center space-x-6">
+          <Link 
+            to="/" 
+            className="font-medium hover:text-primary transition-colors flex items-center gap-1"
+          >
+            <Home size={18} />
+            <span>Home</span>
           </Link>
-          <Link to="/about" className="font-medium hover:text-primary transition-colors">
-            About Us
+          <Link 
+            to="/about" 
+            className="font-medium hover:text-primary transition-colors flex items-center gap-1"
+          >
+            <Users size={18} />
+            <span>About Us</span>
           </Link>
-          <Link to="/products" className="font-medium hover:text-primary transition-colors">
-            Products
+          <Link 
+            to="/products" 
+            className="font-medium hover:text-primary transition-colors flex items-center gap-1"
+          >
+            <ShoppingBag size={18} />
+            <span>Products</span>
           </Link>
-          <Link to="/certifications" className="font-medium hover:text-primary transition-colors">
-            Certifications
+          <Link 
+            to="/certifications" 
+            className="font-medium hover:text-primary transition-colors flex items-center gap-1"
+          >
+            <Award size={18} />
+            <span>Certifications</span>
           </Link>
-          <Link to="/industries" className="font-medium hover:text-primary transition-colors">
-            Industries
+          <Link 
+            to="/industries" 
+            className="font-medium hover:text-primary transition-colors flex items-center gap-1"
+          >
+            <Factory size={18} />
+            <span>Industries</span>
           </Link>
-          <Link to="/contact" className="font-medium hover:text-primary transition-colors">
-            Contact
+          <Link 
+            to="/contact" 
+            className="font-medium hover:text-primary transition-colors flex items-center gap-1"
+          >
+            <Phone size={18} />
+            <span>Contact</span>
           </Link>
         </nav>
 
         {/* Mobile Menu Button */}
-        <button 
+        <Button 
+          variant="ghost"
+          size="icon"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="md:hidden text-foreground p-2"
+          className="md:hidden text-foreground"
+          aria-label="Toggle menu"
         >
-          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+          {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+        </Button>
       </div>
 
       {/* Mobile Navigation */}
@@ -65,45 +99,51 @@ const Navbar = () => {
         <nav className="md:hidden bg-white shadow-lg absolute top-full left-0 right-0 py-4 px-6 flex flex-col space-y-4 animate-fade-in">
           <Link 
             to="/" 
-            className="font-medium hover:text-primary transition-colors py-2"
+            className="font-medium hover:text-primary transition-colors py-2 flex items-center gap-2"
             onClick={() => setIsMenuOpen(false)}
           >
-            Home
+            <Home size={18} />
+            <span>Home</span>
           </Link>
           <Link 
             to="/about" 
-            className="font-medium hover:text-primary transition-colors py-2"
+            className="font-medium hover:text-primary transition-colors py-2 flex items-center gap-2"
             onClick={() => setIsMenuOpen(false)}
           >
-            About Us
+            <Users size={18} />
+            <span>About Us</span>
           </Link>
           <Link 
             to="/products" 
-            className="font-medium hover:text-primary transition-colors py-2"
+            className="font-medium hover:text-primary transition-colors py-2 flex items-center gap-2"
             onClick={() => setIsMenuOpen(false)}
           >
-            Products
+            <ShoppingBag size={18} />
+            <span>Products</span>
           </Link>
           <Link 
             to="/certifications" 
-            className="font-medium hover:text-primary transition-colors py-2"
+            className="font-medium hover:text-primary transition-colors py-2 flex items-center gap-2"
             onClick={() => setIsMenuOpen(false)}
           >
-            Certifications
+            <Award size={18} />
+            <span>Certifications</span>
           </Link>
           <Link 
             to="/industries" 
-            className="font-medium hover:text-primary transition-colors py-2"
+            className="font-medium hover:text-primary transition-colors py-2 flex items-center gap-2"
             onClick={() => setIsMenuOpen(false)}
           >
-            Industries
+            <Factory size={18} />
+            <span>Industries</span>
           </Link>
           <Link 
             to="/contact" 
-            className="font-medium hover:text-primary transition-colors py-2"
+            className="font-medium hover:text-primary transition-colors py-2 flex items-center gap-2"
             onClick={() => setIsMenuOpen(false)}
           >
-            Contact
+            <Phone size={18} />
+            <span>Contact</span>
           </Link>
         </nav>
       )}

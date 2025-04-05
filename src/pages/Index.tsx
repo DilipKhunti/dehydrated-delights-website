@@ -1,4 +1,5 @@
 
+import { useEffect } from 'react';
 import HeroSection from '@/components/HeroSection';
 import ProductCategories from '@/components/ProductCategories';
 import TrustBadges from '@/components/TrustBadges';
@@ -7,18 +8,55 @@ import Testimonials from '@/components/Testimonials';
 import Newsletter from '@/components/Newsletter';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import ScrollToTopButton from '@/components/ScrollToTopButton';
+import { useScrollAnimation } from '@/hooks/use-scroll-animation';
 
 const Index = () => {
+  useScrollAnimation();
+  
+  // Initialize scroll animations
+  useEffect(() => {
+    const animateOnScroll = () => {
+      const elements = document.querySelectorAll('.animate-on-scroll');
+      elements.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        const isVisible = rect.top < window.innerHeight * 0.8;
+        
+        if (isVisible) {
+          el.classList.add('animate-active');
+        }
+      });
+    };
+    
+    // Run once on load
+    animateOnScroll();
+    
+    // Add scroll event listener
+    window.addEventListener('scroll', animateOnScroll);
+    return () => window.removeEventListener('scroll', animateOnScroll);
+  }, []);
+
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen overflow-x-hidden w-full">
       <Navbar />
       <HeroSection />
-      <ProductCategories />
-      <TrustBadges />
-      <FounderMessage />
-      <Testimonials />
-      <Newsletter />
+      <div className="product-categories animate-on-scroll">
+        <ProductCategories />
+      </div>
+      <div className="animate-on-scroll">
+        <TrustBadges />
+      </div>
+      <div className="animate-on-scroll">
+        <FounderMessage />
+      </div>
+      <div className="animate-on-scroll">
+        <Testimonials />
+      </div>
+      <div className="animate-on-scroll">
+        <Newsletter />
+      </div>
       <Footer />
+      <ScrollToTopButton />
     </div>
   );
 };

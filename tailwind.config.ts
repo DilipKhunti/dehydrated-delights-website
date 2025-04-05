@@ -26,11 +26,11 @@ export default {
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				primary: {
-					DEFAULT: 'hsl(var(--primary))',
+					DEFAULT: '#3A7D44', // Updated primary color
 					foreground: 'hsl(var(--primary-foreground))'
 				},
 				secondary: {
-					DEFAULT: 'hsl(var(--secondary))',
+					DEFAULT: '#9DC08B', // Updated secondary color
 					foreground: 'hsl(var(--secondary-foreground))'
 				},
 				destructive: {
@@ -79,6 +79,8 @@ export default {
 					900: '#6c322c',
 					950: '#3a1713',
 				},
+				highlight: '#DF6D14', // Added highlight color
+				cream: '#F8F5E9', // Added cream/light background color
 			},
 			fontFamily: {
 				sans: ['Poppins', 'sans-serif'],
@@ -110,9 +112,21 @@ export default {
 					'0%': { transform: 'scale(0.95)', opacity: '0' },
 					'100%': { transform: 'scale(1)', opacity: '1' }
 				},
+				'slide-in': {
+					'0%': { transform: 'translateY(20px)', opacity: '0' },
+					'100%': { transform: 'translateY(0)', opacity: '1' }
+				},
+				'slide-up': {
+					'0%': { transform: 'translateY(100%)', opacity: '0' },
+					'100%': { transform: 'translateY(0)', opacity: '1' }
+				},
 				'count-up': {
-					'0%': { content: '"0"' },
-					'100%': { content: '"var(--value)"' }
+					from: {
+						'counter-increment': 'count 0',
+					},
+					to: {
+						'counter-increment': 'count var(--value)',
+					}
 				},
 			},
 			animation: {
@@ -121,7 +135,9 @@ export default {
 				'fade-in': 'fade-in 0.3s ease-out',
 				'fade-out': 'fade-out 0.3s ease-out',
 				'scale-in': 'scale-in 0.4s ease-out',
-				'count-up': 'count-up 2s ease-out forwards',
+				'slide-in': 'slide-in 0.5s ease-out',
+				'slide-up': 'slide-up 0.7s ease-out',
+				'count-up': 'count-up 2s forwards',
 			}
 		}
 	},

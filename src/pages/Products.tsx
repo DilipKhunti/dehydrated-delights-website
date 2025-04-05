@@ -1,8 +1,11 @@
-
 import { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+import { toast } from '@/hooks/use-toast';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { toast } from '@/hooks/use-toast';
+import { ShoppingBag, Leaf, Apple, ChevronRight, Filter, Send } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { useScrollAnimation, useScrollToTop } from '@/hooks/use-scroll-animation';
 
 interface Product {
   id: number;
@@ -109,6 +112,9 @@ const products: Product[] = [
 ];
 
 const Products = () => {
+  useScrollToTop();
+  useScrollAnimation();
+  
   const [activeProducts, setActiveProducts] = useState<Product[]>(products);
   const [filters, setFilters] = useState({
     category: 'all',
@@ -116,12 +122,11 @@ const Products = () => {
     packaging: 'all'
   });
   
+  const location = useLocation();
+  
   useEffect(() => {
-    window.scrollTo(0, 0);
-    
-    // Check for hash in URL to scroll to specific category
-    if (window.location.hash) {
-      const id = window.location.hash.substring(1);
+    if (location.hash) {
+      const id = location.hash.substring(1);
       
       setTimeout(() => {
         const element = document.getElementById(id);
@@ -130,7 +135,6 @@ const Products = () => {
           const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
           window.scrollTo({top: y, behavior: 'smooth'});
           
-          // Set filter based on hash
           if (id === 'fruits' || id === 'vegetables' || id === 'herbs') {
             const categoryMap: Record<string, string> = {
               fruits: 'fruit',
@@ -146,7 +150,7 @@ const Products = () => {
         }
       }, 500);
     }
-  }, []);
+  }, [location.hash]);
   
   useEffect(() => {
     filterProducts();
@@ -181,21 +185,34 @@ const Products = () => {
   
   const handleRequestSample = (product: Product) => {
     toast({
-      title: "Sample Request",
-      description: `Your request for ${product.name} sample has been submitted.`,
+      title: "Sample Request Sent",
+      description: `Your request for ${product.name} sample has been submitted. Our team will contact you shortly.`,
+      duration: 5000,
     });
   };
   
+  const getCategoryIcon = (category: string) => {
+    switch(category) {
+      case 'fruit':
+        return <Apple size={16} />;
+      case 'vegetable':
+        return <ShoppingBag size={16} />;
+      case 'herb':
+        return <Leaf size={16} />;
+      default:
+        return <ShoppingBag size={16} />;
+    }
+  };
+  
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen overflow-x-hidden w-full">
       <Navbar />
       
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-sage-900 text-white">
+      <section className="pt-32 pb-20 bg-primary text-white animate-on-scroll">
         <div className="container-wide">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Product Catalog</h1>
-            <p className="text-xl text-sage-100 mb-8">
+            <p className="text-xl text-white/90 mb-8">
               Explore our comprehensive range of premium dehydrated fruits, vegetables, and herbs,
               available in various forms and packaging options to meet your specific needs.
             </p>
@@ -203,46 +220,51 @@ const Products = () => {
         </div>
       </section>
       
-      {/* Category Anchors */}
-      <section className="py-8 bg-white border-b">
+      <section className="py-8 bg-cream border-b animate-on-scroll">
         <div className="container-wide">
           <div className="flex flex-wrap justify-center gap-6">
             <a 
               href="#fruits"
-              className="bg-sage-100 hover:bg-sage-200 px-6 py-3 rounded-full text-sage-800 font-medium transition-colors"
+              className="bg-secondary/10 hover:bg-secondary/20 px-6 py-3 rounded-full text-primary font-medium transition-colors flex items-center gap-2"
               onClick={() => handleFilterChange('category', 'fruit')}
             >
+              <Apple size={18} />
               Dehydrated Fruits
             </a>
             <a 
               href="#vegetables"
-              className="bg-sage-100 hover:bg-sage-200 px-6 py-3 rounded-full text-sage-800 font-medium transition-colors"
+              className="bg-secondary/10 hover:bg-secondary/20 px-6 py-3 rounded-full text-primary font-medium transition-colors flex items-center gap-2"
               onClick={() => handleFilterChange('category', 'vegetable')}
             >
+              <ShoppingBag size={18} />
               Dehydrated Vegetables
             </a>
             <a 
               href="#herbs"
-              className="bg-sage-100 hover:bg-sage-200 px-6 py-3 rounded-full text-sage-800 font-medium transition-colors"
+              className="bg-secondary/10 hover:bg-secondary/20 px-6 py-3 rounded-full text-primary font-medium transition-colors flex items-center gap-2"
               onClick={() => handleFilterChange('category', 'herb')}
             >
+              <Leaf size={18} />
               Dehydrated Herbs
             </a>
             <a 
               href="#custom"
-              className="bg-sage-100 hover:bg-sage-200 px-6 py-3 rounded-full text-sage-800 font-medium transition-colors"
+              className="bg-highlight/10 hover:bg-highlight/20 px-6 py-3 rounded-full text-highlight font-medium transition-colors flex items-center gap-2"
             >
+              <Filter size={18} />
               Custom Solutions
             </a>
           </div>
         </div>
       </section>
       
-      {/* Filters */}
-      <section className="py-8 bg-sage-50">
+      <section className="py-8 bg-cream animate-on-scroll">
         <div className="container-wide">
           <div className="bg-white rounded-xl p-6 shadow-md">
-            <h2 className="text-xl font-bold mb-4">Filter Products</h2>
+            <h2 className="text-xl font-bold mb-4 flex items-center gap-2">
+              <Filter size={20} className="text-primary" />
+              Filter Products
+            </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">Product Type</label>
@@ -289,8 +311,7 @@ const Products = () => {
         </div>
       </section>
       
-      {/* Products Grid */}
-      <section className="py-12 bg-white">
+      <section className="py-12 bg-white animate-on-scroll">
         <div className="container-wide">
           {activeProducts.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -307,7 +328,8 @@ const Products = () => {
                   <div className="p-6">
                     <div className="flex justify-between items-start mb-2">
                       <h3 className="text-xl font-bold">{product.name}</h3>
-                      <span className="bg-sage-100 text-sage-800 text-xs px-2 py-1 rounded-full">
+                      <span className="bg-secondary/10 text-primary text-xs px-2 py-1 rounded-full flex items-center gap-1">
+                        {getCategoryIcon(product.category)}
                         {product.category.charAt(0).toUpperCase() + product.category.slice(1)}
                       </span>
                     </div>
@@ -315,29 +337,29 @@ const Products = () => {
                     <p className="text-gray-600 mb-4">{product.description}</p>
                     
                     <div className="flex flex-wrap gap-2 mb-4">
-                      <span className="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded-full">
+                      <span className="bg-cream text-gray-800 text-xs px-2 py-1 rounded-full">
                         {product.form.charAt(0).toUpperCase() + product.form.slice(1)}
                       </span>
-                      <span className="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded-full">
+                      <span className="bg-cream text-gray-800 text-xs px-2 py-1 rounded-full">
                         Shelf Life: {product.shelfLife}
                       </span>
                       {product.packaging === 'both' ? (
-                        <span className="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded-full">
+                        <span className="bg-cream text-gray-800 text-xs px-2 py-1 rounded-full">
                           Bulk & Retail
                         </span>
                       ) : (
-                        <span className="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded-full">
+                        <span className="bg-cream text-gray-800 text-xs px-2 py-1 rounded-full">
                           {product.packaging.charAt(0).toUpperCase() + product.packaging.slice(1)}
                         </span>
                       )}
                     </div>
                     
-                    <button 
+                    <Button 
                       onClick={() => handleRequestSample(product)}
-                      className="w-full bg-primary text-white py-2 rounded-md font-medium hover:bg-primary/90 transition-colors"
+                      className="w-full bg-primary text-white py-2 rounded-md font-medium hover:bg-primary/90 transition-colors flex items-center justify-center gap-2"
                     >
-                      Request Sample
-                    </button>
+                      <Send size={16} /> Request Sample
+                    </Button>
                   </div>
                 </div>
               ))}
@@ -346,19 +368,18 @@ const Products = () => {
             <div className="text-center py-12">
               <h3 className="text-xl font-bold mb-2">No products match your filters</h3>
               <p className="text-gray-600 mb-4">Try adjusting your filter criteria to see more products.</p>
-              <button 
+              <Button 
                 onClick={() => setFilters({ category: 'all', form: 'all', packaging: 'all' })}
                 className="bg-primary text-white px-4 py-2 rounded-md font-medium hover:bg-primary/90 transition-colors"
               >
                 Reset Filters
-              </button>
+              </Button>
             </div>
           )}
         </div>
       </section>
       
-      {/* Category sections */}
-      <section id="fruits" className="py-16 bg-sage-50">
+      <section id="fruits" className="py-16 bg-cream animate-on-scroll">
         <div className="container-wide">
           <div className="flex flex-col md:flex-row gap-8 items-center">
             <div className="md:w-1/2">
@@ -391,7 +412,7 @@ const Products = () => {
         </div>
       </section>
       
-      <section id="vegetables" className="py-16 bg-white">
+      <section id="vegetables" className="py-16 bg-white animate-on-scroll">
         <div className="container-wide">
           <div className="flex flex-col md:flex-row-reverse gap-8 items-center">
             <div className="md:w-1/2">
@@ -424,7 +445,7 @@ const Products = () => {
         </div>
       </section>
       
-      <section id="herbs" className="py-16 bg-sage-50">
+      <section id="herbs" className="py-16 bg-cream animate-on-scroll">
         <div className="container-wide">
           <div className="flex flex-col md:flex-row gap-8 items-center">
             <div className="md:w-1/2">
@@ -457,7 +478,7 @@ const Products = () => {
         </div>
       </section>
       
-      <section id="custom" className="py-16 bg-terracotta-500 text-white">
+      <section id="custom" className="py-16 bg-highlight text-white animate-on-scroll">
         <div className="container-wide">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Custom Solutions</h2>
