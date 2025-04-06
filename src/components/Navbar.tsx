@@ -26,7 +26,7 @@ const Navbar = () => {
       <div className="container-wide flex items-center justify-between">
         <Link to="/" className="flex items-center space-x-2">
           <img 
-            src="/lovable-uploads/ecff1123-e2bc-4393-83db-e545834059ad.png" 
+            src="/lovable-uploads/logo.png" 
             alt="Hare Krishna Food" 
             className="h-14 md:h-16" 
           />
