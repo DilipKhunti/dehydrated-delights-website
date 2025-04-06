@@ -19,16 +19,7 @@ interface Product {
 }
 
 const products: Product[] = [
-  {
-    id: 1,
-    name: "Dehydrated Mango",
-    category: "fruit",
-    form: "flakes",
-    packaging: "both",
-    description: "Premium dehydrated mango flakes with vibrant color and authentic tropical flavor.",
-    shelfLife: "12 months",
-    image: "https://images.unsplash.com/photo-1501746877-14782df58970?ixlib=rb-1.2.1&auto=format&fit=crop&q=80&w=500&h=300"
-  },
+  
   {
     id: 2,
     name: "Dehydrated Tomato",

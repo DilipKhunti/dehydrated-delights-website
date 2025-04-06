@@ -17,7 +17,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 w-full h-full">
         <div className="absolute inset-0 bg-primary/70 z-10"></div>
         <img 
-          src="https://images.unsplash.com/photo-1573246123716-6b1782bfc499?ixlib=rb-1.2.1&auto=format&fit=crop&q=85&w=2000&h=1200"
+          src="public/photos/onion.jpg"
           alt="Dehydrated food ingredients" 
           className="w-full h-full object-cover"
         />
