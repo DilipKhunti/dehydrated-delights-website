@@ -6,63 +6,29 @@ import Footer from '@/components/Footer';
 
 const timelineEvents = [
   {
-    year: "2005",
+    year: "2004",
     title: "Humble Beginnings",
-    description: "Started as a small family business with one dehydrator and a vision."
+    description: "Started as a small family business with cotton industry"
   },
   {
-    year: "2008",
+    year: "2005",
     title: "First Factory",
     description: "Expanded operations with our first dedicated processing facility."
   },
   {
-    year: "2012",
-    title: "International Export",
+    year: "2022",
+    title: "second factory",
     description: "Began exporting premium dehydrated products to global markets."
   },
   {
-    year: "2015",
-    title: "Certifications Achievement",
-    description: "Obtained key international certifications for quality and safety."
+    year: "2024",
+    title: "Third Factory ",
+    description: "Inaugurated state-of-the-art production facility with advanced technology.Get more experience in this field,Continiued growth with focus on innovation and sustainability"
   },
-  {
-    year: "2018",
-    title: "Modern Facility",
-    description: "Inaugurated state-of-the-art production facility with advanced technology."
-  },
-  {
-    year: "2022",
-    title: "Today & Beyond",
-    description: "Continued growth with focus on innovation and sustainability."
-  }
+
 ];
 
-const teamMembers = [
-  {
-    name: "Krishna Patel",
-    position: "Founder & CEO",
-    bio: "With 20+ years in the food industry, Krishna's vision drives our commitment to quality.",
-    image: "https://randomuser.me/api/portraits/men/32.jpg"
-  },
-  {
-    name: "Anjali Sharma",
-    position: "Operations Director",
-    bio: "Anjali ensures our production meets the highest standards of efficiency and quality.",
-    image: "https://randomuser.me/api/portraits/women/44.jpg"
-  },
-  {
-    name: "Rahul Mehta",
-    position: "Head of R&D",
-    bio: "Leading our innovation efforts to develop new dehydration techniques and products.",
-    image: "https://randomuser.me/api/portraits/men/67.jpg"
-  },
-  {
-    name: "Priya Singh",
-    position: "Quality Control Manager",
-    bio: "Dedicated to maintaining our rigorous quality standards through every step of production.",
-    image: "https://randomuser.me/api/portraits/women/79.jpg"
-  },
-];
+
 
 const About = () => {
   useEffect(() => {

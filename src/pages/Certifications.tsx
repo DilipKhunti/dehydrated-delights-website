@@ -92,44 +92,44 @@ const certifications: Certification[] = [
   },
 ];
 
-const marketCompliance = [
-  {
-    market: "European Union",
-    requirements: [
-      "Compliance with EU Food Safety Regulations",
-      "Adherence to Maximum Residue Limits (MRLs)",
-      "GDPR compliance for customer data",
-      "Complete product traceability"
-    ]
-  },
-  {
-    market: "United States",
-    requirements: [
-      "FDA registration for food facilities",
-      "Compliance with FSMA regulations",
-      "Adherence to US-specific labeling requirements",
-      "Documentation for CBP import procedures"
-    ]
-  },
-  {
-    market: "Gulf Cooperation Council",
-    requirements: [
-      "Compliance with GSO standards",
-      "Halal certification for applicable products",
-      "Product registration with appropriate authorities",
-      "Arabic labeling requirements"
-    ]
-  },
-  {
-    market: "Southeast Asia",
-    requirements: [
-      "Compliance with ASEAN harmonized standards",
-      "Country-specific import requirements",
-      "Product registration where required",
-      "Documentation for customs clearance"
-    ]
-  },
-];
+// const marketCompliance = [
+//   {
+//     market: "European Union",
+//     requirements: [
+//       "Compliance with EU Food Safety Regulations",
+//       "Adherence to Maximum Residue Limits (MRLs)",
+//       "GDPR compliance for customer data",
+//       "Complete product traceability"
+//     ]
+//   },
+//   {
+//     market: "United States",
+//     requirements: [
+//       "FDA registration for food facilities",
+//       "Compliance with FSMA regulations",
+//       "Adherence to US-specific labeling requirements",
+//       "Documentation for CBP import procedures"
+//     ]
+//   },
+//   {
+//     market: "Gulf Cooperation Council",
+//     requirements: [
+//       "Compliance with GSO standards",
+//       "Halal certification for applicable products",
+//       "Product registration with appropriate authorities",
+//       "Arabic labeling requirements"
+//     ]
+//   },
+//   {
+//     market: "Southeast Asia",
+//     requirements: [
+//       "Compliance with ASEAN harmonized standards",
+//       "Country-specific import requirements",
+//       "Product registration where required",
+//       "Documentation for customs clearance"
+//     ]
+//   },
+// ];
 
 const Certifications = () => {
   useEffect(() => {
@@ -249,7 +249,7 @@ const Certifications = () => {
                 <div className="absolute left-1/2 transform -translate-x-1/2 md:translate-y-2 z-10 flex items-center justify-center w-12 h-12 rounded-full bg-secondary text-white font-bold">1</div>
                 
                 <div className="md:w-5/12 md:pl-12">
-                  <img src="https://images.unsplash.com/photo-1595850655192-fc87884c7fb1?ixlib=rb-1.2.1&auto=format&fit=crop&q=80&w=500&h=300" alt="Raw Material Sourcing" className="rounded-lg shadow-md" />
+                  <img src="photos/image1.jpg" alt="Raw Material Sourcing" className="rounded-lg shadow-md" />
                 </div>
               </div>
               
@@ -264,7 +264,7 @@ const Certifications = () => {
                 <div className="absolute left-1/2 transform -translate-x-1/2 md:translate-y-2 z-10 flex items-center justify-center w-12 h-12 rounded-full bg-secondary text-white font-bold">2</div>
                 
                 <div className="md:w-5/12 md:pr-12 md:text-right">
-                  <img src="https://images.unsplash.com/photo-1584509172619-ef2396421d9f?ixlib=rb-1.2.1&auto=format&fit=crop&q=80&w=500&h=300" alt="Inspection & Washing" className="rounded-lg shadow-md" />
+                  <img src="photos/image6.jpg" alt="Inspection & Washing" className="rounded-lg shadow-md" />
                 </div>
               </div>
               
@@ -279,7 +279,7 @@ const Certifications = () => {
                 <div className="absolute left-1/2 transform -translate-x-1/2 md:translate-y-2 z-10 flex items-center justify-center w-12 h-12 rounded-full bg-secondary text-white font-bold">3</div>
                 
                 <div className="md:w-5/12 md:pl-12">
-                  <img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?ixlib=rb-1.2.1&auto=format&fit=crop&q=80&w=500&h=300" alt="Preparation & Cutting" className="rounded-lg shadow-md" />
+                  <img src="photos/image3.jpg" alt="Preparation & Cutting" className="rounded-lg shadow-md" />
                 </div>
               </div>
               
@@ -294,7 +294,7 @@ const Certifications = () => {
                 <div className="absolute left-1/2 transform -translate-x-1/2 md:translate-y-2 z-10 flex items-center justify-center w-12 h-12 rounded-full bg-secondary text-white font-bold">4</div>
                 
                 <div className="md:w-5/12 md:pr-12 md:text-right">
-                  <img src="https://images.unsplash.com/photo-1546069901-d5aeb1d67ca2?ixlib=rb-1.2.1&auto=format&fit=crop&q=80&w=500&h=300" alt="Dehydration Process" className="rounded-lg shadow-md" />
+                  <img src="photos/image4.jpg" alt="Dehydration Process" className="rounded-lg shadow-md" />
                 </div>
               </div>
               
@@ -309,7 +309,7 @@ const Certifications = () => {
                 <div className="absolute left-1/2 transform -translate-x-1/2 md:translate-y-2 z-10 flex items-center justify-center w-12 h-12 rounded-full bg-secondary text-white font-bold">5</div>
                 
                 <div className="md:w-5/12 md:pl-12">
-                  <img src="https://images.unsplash.com/photo-1579165466741-7f35e4755199?ixlib=rb-1.2.1&auto=format&fit=crop&q=80&w=500&h=300" alt="Quality Testing" className="rounded-lg shadow-md" />
+                  <img src="photos/image7.jpg" alt="Quality Testing" className="rounded-lg shadow-md" />
                 </div>
               </div>
               
@@ -324,7 +324,7 @@ const Certifications = () => {
                 <div className="absolute left-1/2 transform -translate-x-1/2 md:translate-y-2 z-10 flex items-center justify-center w-12 h-12 rounded-full bg-secondary text-white font-bold">6</div>
                 
                 <div className="md:w-5/12 md:pr-12 md:text-right">
-                  <img src="https://images.unsplash.com/photo-1553413077-190dd305871c?ixlib=rb-1.2.1&auto=format&fit=crop&q=80&w=500&h=300" alt="Packaging & Shipping" className="rounded-lg shadow-md" />
+                  <img src="photos/image2.jpg" alt="Packaging & Shipping" className="rounded-lg shadow-md" />
                 </div>
               </div>
             </div>

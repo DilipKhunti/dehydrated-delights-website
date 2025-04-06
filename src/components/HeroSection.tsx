@@ -15,9 +15,9 @@ const HeroSection = () => {
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 w-full h-full">
-        <div className="absolute inset-0 bg-primary/70 z-10"></div>
+        <div className="absolute inset-0 bg-black/50 z-10"></div>
         <img 
-          src="public/photos/onion.jpg"
+          src="/photos/onion.jpg"
           alt="Dehydrated food ingredients" 
           className="w-full h-full object-cover"
         />
@@ -36,7 +36,7 @@ const HeroSection = () => {
           </h1>
           
           <p className="text-lg md:text-xl mb-10 max-w-2xl mx-auto animate-fade-in opacity-90">
-            Premium quality dehydrated fruits, vegetables, and herbs 
+            Premium quality dehydrated onion and garlic
             for food manufacturers and exporters worldwide.
           </p>
           
