@@ -10,7 +10,7 @@ const Footer = () => {
           <div>
             <div className="mb-4">
               <img 
-                src="/lovable-uploads/ecff1123-e2bc-4393-83db-e545834059ad.png" 
+                src="/lovable-uploads/logo.png" 
                 alt="Hare Krishna Food" 
                 className="h-20 mb-4" 
               />
@@ -110,19 +110,22 @@ const Footer = () => {
               <li className="flex items-start">
                 <MapPin className="mr-2 h-5 w-5 text-accent shrink-0 mt-0.5" />
                 <span className="text-gray-300">
-                  123 Dehydration Lane, Food Processing District, Gujarat, India 380001
+                At. Kikariya - 364 280. Jesar Road, Ta. Mahuva, Dist. Bhavnagar, Gujarat, India.
+               
+
+
                 </span>
               </li>
               <li className="flex items-center">
                 <Phone className="mr-2 h-5 w-5 text-accent" />
                 <a href="tel:+919876543210" className="text-gray-300 hover:text-accent transition-colors">
-                  +91 98765 43210
+                +91 9979896026
                 </a>
               </li>
               <li className="flex items-center">
                 <Mail className="mr-2 h-5 w-5 text-accent" />
                 <a href="mailto:info@harekrishnafood.com" className="text-gray-300 hover:text-accent transition-colors">
-                  info@harekrishnafood.com
+                harekrishnafoods12@gmail.com
                 </a>
               </li>
             </ul>
