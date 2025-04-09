@@ -1,4 +1,3 @@
-
 import { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -18,77 +17,20 @@ const industries: Industry[] = [
     id: 1,
     name: "Food & Beverage Manufacturers",
     icon: "🍽️",
-    description: "We supply premium dehydrated ingredients to food manufacturers producing snacks, ready meals, soups, seasonings, and more.",
+    description: "We supply premium dehydrated garlic and onion to food manufacturers producing snacks, ready meals, soups, seasonings, and more.",
     benefits: [
-      "Consistent flavor and color for your products",
-      "Extended shelf life without artificial preservatives",
-      "Custom sizing and cutting options",
-      "Reduced storage space and logistics costs"
+      "Rich, consistent flavor in every batch",
+      "Long shelf life without artificial additives",
+      "Custom granule sizes (minced, flakes, powder)",
+      "Lower logistics and storage costs"
     ],
     products: [
-      "Dehydrated Vegetable Blends",
-      "Fruit Powders for Beverages",
-      "Herb Mixes for Seasonings",
-      "Custom Formulations"
+      "Dehydrated Garlic Powder",
+      "Minced Onion Flakes",
+      "Garlic & Onion Blends for Seasonings",
+      "Custom Formulations for Food Production"
     ],
-    image: "https://images.unsplash.com/photo-1606248897732-2c5ffe759c04?ixlib=rb-1.2.1&auto=format&fit=crop&q=80&w=800&h=500"
-  },
-  {
-    id: 2,
-    name: "Pharmaceutical Companies",
-    icon: "💊",
-    description: "We provide high-quality dehydrated ingredients for pharmaceutical products, supplements, and natural remedies.",
-    benefits: [
-      "Rigorous quality control and documentation",
-      "Consistent active compound concentration",
-      "Free from contaminants and adulterants",
-      "Traceability from source to finished product"
-    ],
-    products: [
-      "Herb Extracts",
-      "Fruit Powders for Supplements",
-      "Natural Colorants",
-      "Therapeutic Herb Blends"
-    ],
-    image: "https://images.unsplash.com/photo-1631549916768-4119b2e5f926?ixlib=rb-1.2.1&auto=format&fit=crop&q=80&w=800&h=500"
-  },
-  {
-    id: 3,
-    name: "Nutraceutical Brands",
-    icon: "🌿",
-    description: "Our dehydrated ingredients serve as the foundation for high-quality nutraceutical products that promote health and wellness.",
-    benefits: [
-      "Preserved nutritional content",
-      "Natural, clean-label ingredients",
-      "Versatile application in various formulations",
-      "Consistent potency and bioavailability"
-    ],
-    products: [
-      "Superfood Powders",
-      "Fruit and Vegetable Concentrates",
-      "Natural Supplements",
-      "Functional Food Ingredients"
-    ],
-    image: "https://images.unsplash.com/photo-1612470958676-2ce8e8e9e0c9?ixlib=rb-1.2.1&auto=format&fit=crop&q=80&w=800&h=500"
-  },
-  {
-    id: 4,
-    name: "Retail Chains",
-    icon: "🛒",
-    description: "We supply packaged dehydrated products for retail distribution, including specialty food stores and supermarket chains.",
-    benefits: [
-      "Private labeling options",
-      "Attractive packaging solutions",
-      "Consistent product quality",
-      "Flexible order quantities"
-    ],
-    products: [
-      "Retail-Ready Dried Fruit Snacks",
-      "Gourmet Dried Vegetable Assortments",
-      "Premium Herb and Spice Blends",
-      "Gift Sets and Specialty Items"
-    ],
-    image: "https://images.unsplash.com/photo-1595614007536-6e6a8cb9f256?ixlib=rb-1.2.1&auto=format&fit=crop&q=80&w=800&h=500"
+   image: "https://images.unsplash.com/photo-1589308078054-8323b7c7bbd7?auto=format&fit=crop&q=80&w=800&h=500"
   },
   {
     id: 5,
@@ -107,26 +49,26 @@ const industries: Industry[] = [
       "Large Volume Herb Supplies",
       "Mixed Container Programs"
     ],
-    image: "https://images.unsplash.com/photo-1591474200742-8e512e6f98f8?ixlib=rb-1.2.1&auto=format&fit=crop&q=80&w=800&h=500"
+    image: "https://images.unsplash.com/photo-1600768335822-0e5f2be6d9ac?auto=format&fit=crop&q=80&w=800&h=500"
   },
   {
     id: 6,
     name: "Food Service Providers",
-    icon: "🍲",
-    description: "Our dehydrated ingredients are ideal for restaurants, catering companies, and institutional food service operations.",
+    icon: "🍽️",
+    description: "Our garlic and onion products are a favorite among chefs for their convenience, flavor, and consistent quality.",
     benefits: [
-      "Easy storage and long shelf life",
-      "Consistent flavor across seasons",
-      "Time-saving preparation",
-      "Reduced food waste and spoilage"
+      "No peeling or chopping required",
+      "Stable inventory across seasons",
+      "Rapid hydration and high yield",
+      "Less food waste and spoilage"
     ],
     products: [
-      "Chef-Ready Vegetable Mixes",
-      "Just-Add-Water Soup Bases",
-      "Culinary Herb Blends",
-      "Fruit Ingredients for Desserts"
+      "Chef Packs of Garlic Flakes",
+      "Onion Powders for Sauces & Bases",
+      "Pre-mixed Garlic-Onion Blends",
+      "Bulk Food Service Packs"
     ],
-    image: "https://images.unsplash.com/photo-1528740096961-3798add19cb7?ixlib=rb-1.2.1&auto=format&fit=crop&q=80&w=800&h=500"
+    image: "https://images.unsplash.com/photo-1627308595229-7830a5c91f9f?auto=format&fit=crop&q=80&w=800&h=500"
   },
 ];
 

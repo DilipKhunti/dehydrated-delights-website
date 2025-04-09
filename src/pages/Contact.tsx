@@ -115,8 +115,9 @@ const Contact = () => {
                   <div>
                     <h3 className="font-bold mb-1">Visit Us</h3>
                     <p className="text-gray-600">
-                      123 Dehydration Lane, Food Processing District<br />
-                      Gujarat, India 380001
+                    At. Kikariya - 364 280. Jesar Road, Ta. Mahuva, Dist. Bhavnagar, Gujarat, India.
+
+
                     </p>
                   </div>
                 </div>
@@ -127,10 +128,10 @@ const Contact = () => {
                     <h3 className="font-bold mb-1">Call Us</h3>
                     <p className="text-gray-600">
                       <a href="tel:+919876543210" className="hover:text-primary transition-colors">
-                        +91 98765 43210
+                        +91 9879896791
                       </a><br />
                       <a href="tel:+919876543211" className="hover:text-primary transition-colors">
-                        +91 98765 43211
+                        +91 9979896791
                       </a>
                     </p>
                   </div>
@@ -142,11 +143,8 @@ const Contact = () => {
                     <h3 className="font-bold mb-1">Email Us</h3>
                     <p className="text-gray-600">
                       <a href="mailto:info@harekrishnafood.com" className="hover:text-primary transition-colors">
-                        info@harekrishnafood.com
+                        harekrishnafoods12@gmail.com
                       </a><br />
-                      <a href="mailto:sales@harekrishnafood.com" className="hover:text-primary transition-colors">
-                        sales@harekrishnafood.com
-                      </a>
                     </p>
                   </div>
                 </div>
@@ -156,9 +154,7 @@ const Contact = () => {
                   <div>
                     <h3 className="font-bold mb-1">Business Hours</h3>
                     <p className="text-gray-600">
-                      Monday - Friday: 9:00 AM - 6:00 PM<br />
-                      Saturday: 9:00 AM - 1:00 PM<br />
-                      Sunday: Closed
+                      Monday - Friday: 9:00 AM - 10:00 PM<br />
                     </p>
                   </div>
                 </div>
@@ -169,7 +165,7 @@ const Contact = () => {
                     <h3 className="font-bold mb-1">WhatsApp Business</h3>
                     <p className="text-gray-600">
                       <a href="https://wa.me/919876543210" className="hover:text-primary transition-colors">
-                        +91 98765 43210
+                        +91 9879896791
                       </a>
                     </p>
                   </div>
