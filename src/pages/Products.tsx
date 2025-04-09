@@ -50,7 +50,8 @@ const products: Product[] = [
     description:
       "Whole Dehydrated garlic cloves, ideal for seasoning and flavoring dishes.",
     shelfLife: "24 months",
-    image: "https://www.jalaramagri.com/wp-content/uploads/2019/09/img1.png",
+    image:
+      "https://media.istockphoto.com/id/827736066/photo/dried-and-fresh-garlic.jpg?s=612x612&w=0&k=20&c=fjS8dzf5lm-DD1thARvDbAEtK1wMzTI2v1exc4WW7RY=",
   },
 ];
 
@@ -416,7 +417,7 @@ const Products = () => {
             </div>
             <div className="md:w-1/2">
               <img
-                src="https://www.jalaramagri.com/wp-content/uploads/2019/09/img1.png"
+                src="https://media.istockphoto.com/id/827736066/photo/dried-and-fresh-garlic.jpg?s=612x612&w=0&k=20&c=fjS8dzf5lm-DD1thARvDbAEtK1wMzTI2v1exc4WW7RY="
                 alt="Dehydrated Garlic"
                 className="rounded-xl shadow-lg"
               />
