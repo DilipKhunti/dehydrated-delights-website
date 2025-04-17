@@ -83,22 +83,22 @@ const Footer = () => {
             <ul className="space-y-2">
               <li>
                 <Link to="/products#fruits" className="text-gray-300 hover:text-accent transition-colors">
-                  Dehydrated Fruits
+                  Dehydrated onion
                 </Link>
               </li>
               <li>
                 <Link to="/products#vegetables" className="text-gray-300 hover:text-accent transition-colors">
-                  Dehydrated Vegetables
+                  Dehydrated garlic
                 </Link>
               </li>
               <li>
                 <Link to="/products#herbs" className="text-gray-300 hover:text-accent transition-colors">
-                  Dehydrated Herbs
+                  onion powder
                 </Link>
               </li>
               <li>
                 <Link to="/products#custom" className="text-gray-300 hover:text-accent transition-colors">
-                  Custom Solutions
+                  Garlic powder
                 </Link>
               </li>
             </ul>
