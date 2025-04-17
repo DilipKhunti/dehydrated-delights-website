@@ -40,9 +40,6 @@ const Index = () => {
     <div className="min-h-screen overflow-x-hidden w-full">
       <Navbar />
       <HeroSection />
-      <div className="product-categories animate-on-scroll">
-        <ProductCategories />
-      </div>
       <div className="animate-on-scroll">
         <TrustBadges />
       </div>

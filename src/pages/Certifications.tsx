@@ -17,84 +17,56 @@ const certifications: Certification[] = [
     name: "FSSAI Certification",
     description:
       "Food Safety and Standards Authority of India certification ensures our products meet strict food safety standards.",
-    logo: "https://fssai.gov.in/img/home/FSSAI_logo.png",
+    logo: "https://vectorconversion.net/wp-content/uploads/2019/11/fssai-01.jpg",
     details: [
       "Compliance with Food Safety and Standards Act, 2006",
       "Regular audits to ensure facility meets all requirements",
       "Guarantees products are safe for consumption",
       "License Number: 10012345678910",
     ],
-    downloadLink: "#",
+    downloadLink: "./photos/fssai.png",
   },
   {
     id: 2,
     name: "ISO 22000:2018",
     description:
       "International Organization for Standardization certification for our food safety management system.",
-    logo: "https://www.iso.org/files/live/sites/isoorg/files/about%20ISO/img/logo/logo_iso_black.png",
+    logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJTcqBwPFOwWfLTqS1HpqElS_XKpOa74Dw2Q&s",
     details: [
       "Food safety management system certification",
       "Ensures consistent and safe food production",
       "Includes HACCP principles and prerequisites",
       "Certificate Number: ISO22000-IN-12345",
     ],
-    downloadLink: "#",
+    downloadLink: "./photos/iso.png",
   },
   {
     id: 3,
     name: "HACCP Certification",
     description:
       "Hazard Analysis Critical Control Point system ensures food safety throughout our production process.",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/HACCP_logo.png/800px-HACCP_logo.png",
+    logo: "https://5.imimg.com/data5/SELLER/Default/2020/10/RQ/QB/ET/44636240/hazard-analysis-critical-control-point-haccp.jpg",
     details: [
       "Systematic approach to food safety from raw materials to distribution",
       "Identifies and controls biological, chemical, and physical hazards",
       "Preventive approach to food safety",
       "Certification Number: HACCP-2022-7890",
     ],
-    downloadLink: "#",
+    downloadLink: "./photos/haccp.png",
   },
   {
     id: 4,
     name: "Organic Certification",
     description:
       "Our organic products are certified to meet international organic standards.",
-    logo: "https://images.squarespace-cdn.com/content/v1/5ee899cd0cc99f1b9d64463c/1596051152496-62YVUKF9VHC28WHPRZ1M/Organic+Logo+USA+USDA.jpg",
+    logo: "https://www.akeandhumphris.co.uk/cdn/shop/collections/shutterstock_1169688391_organic_landscape.jpg?v=1694590105",
     details: [
       "Ensures no synthetic fertilizers, pesticides, or GMOs",
       "Meets USDA NOP and EU Organic standards",
       "Annual inspections of our organic production line",
       "Certificate Number: ORG-12345678",
     ],
-    downloadLink: "#",
-  },
-  {
-    id: 5,
-    name: "Kosher Certification",
-    description:
-      "Kosher certified products that meet religious dietary requirements.",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Orthodox_union_kashrus_logo.svg/1200px-Orthodox_union_kashrus_logo.svg.png",
-    details: [
-      "Strict adherence to kosher dietary laws",
-      "Regular rabbi inspections of our facility",
-      "Separated processing for kosher certified products",
-      "Certificate Number: KOS-24680",
-    ],
-    downloadLink: "#",
-  },
-  {
-    id: 6,
-    name: "Halal Certification",
-    description:
-      "Our products are certified halal, meeting Islamic dietary requirements.",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Malaysian_Department_of_Islamic_Development.svg/1200px-Malaysian_Department_of_Islamic_Development.svg.png",
-    details: [
-      "Compliance with Islamic dietary laws",
-      "Regular inspections by halal certification body",
-      "Ensures products are permissible according to Islamic law",
-      "Certificate Number: HAL-13579",
-    ],
-    downloadLink: "#",
+    downloadLink: "./photos/organic.jpg",
   },
 ];
 

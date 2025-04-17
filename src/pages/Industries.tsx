@@ -30,7 +30,7 @@ const industries: Industry[] = [
       "Garlic & Onion Blends for Seasonings",
       "Custom Formulations for Food Production"
     ],
-   image: "https://images.unsplash.com/photo-1589308078054-8323b7c7bbd7?auto=format&fit=crop&q=80&w=800&h=500"
+   image: "./photos/food-beverage.png"
   },
   {
     id: 5,
@@ -49,7 +49,7 @@ const industries: Industry[] = [
       "Large Volume Herb Supplies",
       "Mixed Container Programs"
     ],
-    image: "https://images.unsplash.com/photo-1600768335822-0e5f2be6d9ac?auto=format&fit=crop&q=80&w=800&h=500"
+    image: "./photos/export.png"
   },
   {
     id: 6,
@@ -68,7 +68,7 @@ const industries: Industry[] = [
       "Pre-mixed Garlic-Onion Blends",
       "Bulk Food Service Packs"
     ],
-    image: "https://images.unsplash.com/photo-1627308595229-7830a5c91f9f?auto=format&fit=crop&q=80&w=800&h=500"
+    image: "./photos/marketing.png"
   },
 ];
 
