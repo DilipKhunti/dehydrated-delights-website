@@ -29,7 +29,7 @@ const Index = () => {
     };
     
     // Run once on load
-    animateOnScroll();
+    setTimeout(animateOnScroll, 100);
     
     // Add scroll event listener
     window.addEventListener('scroll', animateOnScroll);
@@ -39,22 +39,24 @@ const Index = () => {
   return (
     <div className="min-h-screen overflow-x-hidden w-full">
       <Navbar />
-      <HeroSection />
-      <div className="animate-on-scroll product-categories">
-        <ProductCategories />
-      </div>
-      <div className="animate-on-scroll">
-        <TrustBadges />
-      </div>
-      <div className="animate-on-scroll">
-        <FounderMessage />
-      </div>
-      <div className="animate-on-scroll">
-        <Testimonials />
-      </div>
-      <div className="animate-on-scroll">
-        <Newsletter />
-      </div>
+      <main>
+        <HeroSection />
+        <div className="animate-on-scroll product-categories">
+          <ProductCategories />
+        </div>
+        <div className="animate-on-scroll">
+          <TrustBadges />
+        </div>
+        <div className="animate-on-scroll">
+          <FounderMessage />
+        </div>
+        <div className="animate-on-scroll">
+          <Testimonials />
+        </div>
+        <div className="animate-on-scroll">
+          <Newsletter />
+        </div>
+      </main>
       <Footer />
       <ScrollToTopButton />
     </div>
