@@ -310,7 +310,7 @@ const Certifications = () => {
 
                 <div className="md:w-5/12 md:pr-12 order-3">
                   <img
-                    src="photos/image4.jpg"
+                    src="photos/process.jpg"
                     alt="Dehydration Process"
                     className="rounded-lg shadow-md mt-4 md:mt-0"
                   />
