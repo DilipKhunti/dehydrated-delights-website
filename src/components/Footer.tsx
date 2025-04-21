@@ -16,7 +16,7 @@ const Footer = () => {
               />
             </div>
             <p className="text-gray-300 mb-4">
-              Delivering nature's goodness – one dehydrated slice at a time. Premium dehydrated fruits, vegetables, and herbs.
+              Delivering nature's goodness – one dehydrated slice at a time. Premium dehydrated Onion and Garlic.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-white hover:text-accent transition-colors">

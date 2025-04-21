@@ -7,7 +7,7 @@ const FounderMessage = () => {
           <div className="relative">
             <div className="relative h-[500px] w-full overflow-hidden rounded-xl shadow-xl">
               <img 
-                src="photos/FOUNDER.jpg" 
+                src="photos/founder.jpg" 
                 alt="Founder of Hare Krishna Food" 
                 className="h-full w-full object-cover"
               />

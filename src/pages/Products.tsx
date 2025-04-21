@@ -39,19 +39,19 @@ const products: Product[] = [
       "Dehydrated onion flakes with a rich flavor, perfect for soups and sauces.",
     shelfLife: "18 months",
     image:
-      "https://5.imimg.com/data5/SELLER/Default/2023/2/PJ/UR/MJ/10198027/dehydrated-onion-flakes-ginny-food-500x500.jpg",
+      "./photos/onion-product.jpg",
   },
   {
     id: 3,
     name: "Dehydrated Garlic",
-    category: "herb",
+    category: "vegetable",
     form: "whole",
     packaging: "both",
     description:
       "Whole Dehydrated garlic cloves, ideal for seasoning and flavoring dishes.",
     shelfLife: "24 months",
     image:
-      "https://media.istockphoto.com/id/827736066/photo/dried-and-fresh-garlic.jpg?s=612x612&w=0&k=20&c=fjS8dzf5lm-DD1thARvDbAEtK1wMzTI2v1exc4WW7RY=",
+      "./photos/garlic-product.jpg",
   },
 ];
 
@@ -380,7 +380,7 @@ const Products = () => {
             </div>
             <div className="md:w-1/2">
               <img
-                src="https://5.imimg.com/data5/SELLER/Default/2023/2/PJ/UR/MJ/10198027/dehydrated-onion-flakes-ginny-food-500x500.jpg"
+                src="./photos/onion-product.jpg"
                 alt="Dried Onions"
                 className="rounded-xl shadow-lg"
               />
@@ -417,7 +417,7 @@ const Products = () => {
             </div>
             <div className="md:w-1/2">
               <img
-                src="https://media.istockphoto.com/id/827736066/photo/dried-and-fresh-garlic.jpg?s=612x612&w=0&k=20&c=fjS8dzf5lm-DD1thARvDbAEtK1wMzTI2v1exc4WW7RY="
+                src="./photos/garlic-product.jpg"
                 alt="Dehydrated Garlic"
                 className="rounded-xl shadow-lg"
               />
