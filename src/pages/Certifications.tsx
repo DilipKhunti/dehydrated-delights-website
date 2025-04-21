@@ -1,6 +1,8 @@
+
 import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 interface Certification {
   id: number;
@@ -71,6 +73,8 @@ const certifications: Certification[] = [
 ];
 
 const Certifications = () => {
+  const isMobile = useIsMobile();
+  
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -188,10 +192,10 @@ const Certifications = () => {
       </section>
 
       {/* Quality Process */}
-      <section className="py-16 bg-cream">
+      <section className="py-12 md:py-16 bg-cream">
         <div className="container-wide">
-          <div className="max-w-3xl mx-auto text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary">
+          <div className="max-w-3xl mx-auto text-center mb-8 md:mb-12">
+            <h2 className="text-2xl md:text-4xl font-bold mb-4 text-primary">
               Our Quality Assurance Process
             </h2>
             <p className="text-gray-600">
@@ -201,13 +205,16 @@ const Certifications = () => {
           </div>
 
           <div className="relative">
-            {/* Process Steps */}
-            <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-1 bg-secondary/30 transform -translate-x-1/2"></div>
+            {/* Process Steps for Desktop */}
+            {!isMobile && (
+              <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-1 bg-secondary/30 transform -translate-x-1/2"></div>
+            )}
 
-            <div className="space-y-12">
+            <div className="space-y-8 md:space-y-12">
+              {/* Step 1 */}
               <div className="relative flex flex-col md:flex-row md:justify-between items-center md:items-start">
-                <div className="md:w-5/12 mb-8 md:mb-0 md:pr-12 md:text-right">
-                  <h3 className="text-xl font-bold mb-2 text-primary">
+                <div className="md:w-5/12 mb-6 md:mb-0 md:pr-12 text-center md:text-right order-2 md:order-1">
+                  <h3 className="text-lg md:text-xl font-bold mb-2 text-primary">
                     1. Raw Material Sourcing
                   </h3>
                   <p className="text-gray-600">
@@ -217,22 +224,24 @@ const Certifications = () => {
                   </p>
                 </div>
 
-                <div className="absolute left-1/2 transform -translate-x-1/2 md:translate-y-2 z-10 flex items-center justify-center w-12 h-12 rounded-full bg-secondary text-white font-bold">
+                {/* Step number indicator */}
+                <div className="absolute md:static left-0 top-0 md:left-1/2 transform md:-translate-x-1/2 md:translate-y-2 z-10 flex items-center justify-center w-8 h-8 md:w-12 md:h-12 rounded-full bg-secondary text-white font-bold order-1 md:order-2">
                   1
                 </div>
 
-                <div className="md:w-5/12 md:pl-12">
+                <div className="md:w-5/12 md:pl-12 order-3">
                   <img
                     src="photos/image1.jpg"
                     alt="Raw Material Sourcing"
-                    className="rounded-lg shadow-md"
+                    className="rounded-lg shadow-md mt-4 md:mt-0"
                   />
                 </div>
               </div>
 
+              {/* Step 2 */}
               <div className="relative flex flex-col md:flex-row-reverse md:justify-between items-center md:items-start">
-                <div className="md:w-5/12 mb-8 md:mb-0 md:pl-12">
-                  <h3 className="text-xl font-bold mb-2 text-primary">
+                <div className="md:w-5/12 mb-6 md:mb-0 md:pl-12 text-center md:text-left order-2 md:order-1">
+                  <h3 className="text-lg md:text-xl font-bold mb-2 text-primary">
                     2. Inspection & Washing
                   </h3>
                   <p className="text-gray-600">
@@ -242,22 +251,24 @@ const Certifications = () => {
                   </p>
                 </div>
 
-                <div className="absolute left-1/2 transform -translate-x-1/2 md:translate-y-2 z-10 flex items-center justify-center w-12 h-12 rounded-full bg-secondary text-white font-bold">
+                {/* Step number indicator */}
+                <div className="absolute md:static left-0 top-0 md:left-1/2 transform md:-translate-x-1/2 md:translate-y-2 z-10 flex items-center justify-center w-8 h-8 md:w-12 md:h-12 rounded-full bg-secondary text-white font-bold order-1 md:order-2">
                   2
                 </div>
 
-                <div className="md:w-5/12 md:pr-12 md:text-right">
+                <div className="md:w-5/12 md:pr-12 order-3">
                   <img
                     src="photos/image6.jpg"
                     alt="Inspection & Washing"
-                    className="rounded-lg shadow-md"
+                    className="rounded-lg shadow-md mt-4 md:mt-0"
                   />
                 </div>
               </div>
 
+              {/* Step 3 */}
               <div className="relative flex flex-col md:flex-row md:justify-between items-center md:items-start">
-                <div className="md:w-5/12 mb-8 md:mb-0 md:pr-12 md:text-right">
-                  <h3 className="text-xl font-bold mb-2 text-primary">
+                <div className="md:w-5/12 mb-6 md:mb-0 md:pr-12 text-center md:text-right order-2 md:order-1">
+                  <h3 className="text-lg md:text-xl font-bold mb-2 text-primary">
                     3. Preparation & Cutting
                   </h3>
                   <p className="text-gray-600">
@@ -266,22 +277,24 @@ const Certifications = () => {
                   </p>
                 </div>
 
-                <div className="absolute left-1/2 transform -translate-x-1/2 md:translate-y-2 z-10 flex items-center justify-center w-12 h-12 rounded-full bg-secondary text-white font-bold">
+                {/* Step number indicator */}
+                <div className="absolute md:static left-0 top-0 md:left-1/2 transform md:-translate-x-1/2 md:translate-y-2 z-10 flex items-center justify-center w-8 h-8 md:w-12 md:h-12 rounded-full bg-secondary text-white font-bold order-1 md:order-2">
                   3
                 </div>
 
-                <div className="md:w-5/12 md:pl-12">
+                <div className="md:w-5/12 md:pl-12 order-3">
                   <img
                     src="photos/image3.jpg"
                     alt="Preparation & Cutting"
-                    className="rounded-lg shadow-md"
+                    className="rounded-lg shadow-md mt-4 md:mt-0"
                   />
                 </div>
               </div>
 
+              {/* Step 4 */}
               <div className="relative flex flex-col md:flex-row-reverse md:justify-between items-center md:items-start">
-                <div className="md:w-5/12 mb-8 md:mb-0 md:pl-12">
-                  <h3 className="text-xl font-bold mb-2 text-primary">
+                <div className="md:w-5/12 mb-6 md:mb-0 md:pl-12 text-center md:text-left order-2 md:order-1">
+                  <h3 className="text-lg md:text-xl font-bold mb-2 text-primary">
                     4. Dehydration Process
                   </h3>
                   <p className="text-gray-600">
@@ -290,22 +303,24 @@ const Certifications = () => {
                   </p>
                 </div>
 
-                <div className="absolute left-1/2 transform -translate-x-1/2 md:translate-y-2 z-10 flex items-center justify-center w-12 h-12 rounded-full bg-secondary text-white font-bold">
+                {/* Step number indicator */}
+                <div className="absolute md:static left-0 top-0 md:left-1/2 transform md:-translate-x-1/2 md:translate-y-2 z-10 flex items-center justify-center w-8 h-8 md:w-12 md:h-12 rounded-full bg-secondary text-white font-bold order-1 md:order-2">
                   4
                 </div>
 
-                <div className="md:w-5/12 md:pr-12 md:text-right">
+                <div className="md:w-5/12 md:pr-12 order-3">
                   <img
                     src="photos/image4.jpg"
                     alt="Dehydration Process"
-                    className="rounded-lg shadow-md"
+                    className="rounded-lg shadow-md mt-4 md:mt-0"
                   />
                 </div>
               </div>
 
+              {/* Step 5 */}
               <div className="relative flex flex-col md:flex-row md:justify-between items-center md:items-start">
-                <div className="md:w-5/12 mb-8 md:mb-0 md:pr-12 md:text-right">
-                  <h3 className="text-xl font-bold mb-2 text-primary">
+                <div className="md:w-5/12 mb-6 md:mb-0 md:pr-12 text-center md:text-right order-2 md:order-1">
+                  <h3 className="text-lg md:text-xl font-bold mb-2 text-primary">
                     5. Quality Testing
                   </h3>
                   <p className="text-gray-600">
@@ -314,22 +329,24 @@ const Certifications = () => {
                   </p>
                 </div>
 
-                <div className="absolute left-1/2 transform -translate-x-1/2 md:translate-y-2 z-10 flex items-center justify-center w-12 h-12 rounded-full bg-secondary text-white font-bold">
+                {/* Step number indicator */}
+                <div className="absolute md:static left-0 top-0 md:left-1/2 transform md:-translate-x-1/2 md:translate-y-2 z-10 flex items-center justify-center w-8 h-8 md:w-12 md:h-12 rounded-full bg-secondary text-white font-bold order-1 md:order-2">
                   5
                 </div>
 
-                <div className="md:w-5/12 md:pl-12">
+                <div className="md:w-5/12 md:pl-12 order-3">
                   <img
                     src="photos/image7.jpg"
                     alt="Quality Testing"
-                    className="rounded-lg shadow-md"
+                    className="rounded-lg shadow-md mt-4 md:mt-0"
                   />
                 </div>
               </div>
 
+              {/* Step 6 */}
               <div className="relative flex flex-col md:flex-row-reverse md:justify-between items-center md:items-start">
-                <div className="md:w-5/12 mb-8 md:mb-0 md:pl-12">
-                  <h3 className="text-xl font-bold mb-2 text-primary">
+                <div className="md:w-5/12 mb-6 md:mb-0 md:pl-12 text-center md:text-left order-2 md:order-1">
+                  <h3 className="text-lg md:text-xl font-bold mb-2 text-primary">
                     6. Packaging & Shipping
                   </h3>
                   <p className="text-gray-600">
@@ -338,15 +355,16 @@ const Certifications = () => {
                   </p>
                 </div>
 
-                <div className="absolute left-1/2 transform -translate-x-1/2 md:translate-y-2 z-10 flex items-center justify-center w-12 h-12 rounded-full bg-secondary text-white font-bold">
+                {/* Step number indicator */}
+                <div className="absolute md:static left-0 top-0 md:left-1/2 transform md:-translate-x-1/2 md:translate-y-2 z-10 flex items-center justify-center w-8 h-8 md:w-12 md:h-12 rounded-full bg-secondary text-white font-bold order-1 md:order-2">
                   6
                 </div>
 
-                <div className="md:w-5/12 md:pr-12 md:text-right">
+                <div className="md:w-5/12 md:pr-12 order-3">
                   <img
                     src="photos/image2.jpg"
                     alt="Packaging & Shipping"
-                    className="rounded-lg shadow-md"
+                    className="rounded-lg shadow-md mt-4 md:mt-0"
                   />
                 </div>
               </div>

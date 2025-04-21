@@ -1,5 +1,6 @@
 
 import { useState, useEffect } from 'react';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 interface Testimonial {
   id: number;
@@ -43,6 +44,7 @@ const testimonials: Testimonial[] = [
 
 const Testimonials = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const isMobile = useIsMobile();
   
   useEffect(() => {
     const interval = setInterval(() => {
@@ -53,21 +55,21 @@ const Testimonials = () => {
   }, []);
   
   return (
-    <section className="py-16 bg-primary text-white">
+    <section className="py-12 md:py-16 bg-primary text-white">
       <div className="container-wide">
-        <div className="max-w-3xl mx-auto text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">What Our Clients Say</h2>
+        <div className="max-w-3xl mx-auto text-center mb-8 md:mb-12">
+          <h2 className="text-2xl md:text-4xl font-bold mb-4">What Our Clients Say</h2>
           <p className="text-white/80">
             We take pride in the relationships we've built with food manufacturers and distributors worldwide.
           </p>
         </div>
         
         <div className="max-w-4xl mx-auto">
-          <div className="relative h-80">
+          <div className={`relative ${isMobile ? 'h-[420px]' : 'h-80'}`}>
             {testimonials.map((testimonial, index) => (
               <div 
                 key={testimonial.id}
-                className={`absolute inset-0 transition-all duration-500 flex flex-col md:flex-row gap-8 items-center bg-secondary/50 rounded-xl p-8 ${
+                className={`absolute inset-0 transition-all duration-500 flex flex-col md:flex-row gap-4 md:gap-8 items-center bg-secondary/50 rounded-xl p-4 md:p-8 ${
                   index === activeIndex 
                     ? 'opacity-100 translate-x-0 z-10' 
                     : 'opacity-0 translate-x-full z-0'
@@ -78,26 +80,26 @@ const Testimonials = () => {
                     <img 
                       src={testimonial.image} 
                       alt={testimonial.name} 
-                      className="w-20 h-20 rounded-full mx-auto object-cover border-2 border-accent"
+                      className="w-16 h-16 md:w-20 md:h-20 rounded-full mx-auto object-cover border-2 border-accent"
                     />
                   ) : (
-                    <div className="w-20 h-20 rounded-full mx-auto bg-primary flex items-center justify-center text-2xl font-bold">
+                    <div className="w-16 h-16 md:w-20 md:h-20 rounded-full mx-auto bg-primary flex items-center justify-center text-2xl font-bold">
                       {testimonial.name.charAt(0)}
                     </div>
                   )}
                   <img 
                     src={testimonial.logo} 
                     alt={testimonial.company} 
-                    className="max-h-10 max-w-full mx-auto"
+                    className="max-h-8 md:max-h-10 max-w-full mx-auto"
                   />
                 </div>
                 
                 <div className="flex-grow">
-                  <div className="flex mb-2">
+                  <div className="flex justify-center md:justify-start mb-2">
                     {[...Array(5)].map((_, i) => (
                       <svg 
                         key={i} 
-                        className={`w-5 h-5 ${i < testimonial.rating ? 'text-yellow-400' : 'text-gray-400'}`}
+                        className={`w-4 h-4 md:w-5 md:h-5 ${i < testimonial.rating ? 'text-yellow-400' : 'text-gray-400'}`}
                         fill="currentColor" 
                         viewBox="0 0 20 20"
                       >
@@ -106,11 +108,11 @@ const Testimonials = () => {
                     ))}
                   </div>
                   
-                  <blockquote className="text-lg italic mb-4">"{testimonial.text}"</blockquote>
+                  <blockquote className="text-sm md:text-lg italic mb-3 md:mb-4 text-center md:text-left">"{testimonial.text}"</blockquote>
                   
-                  <div>
+                  <div className="text-center md:text-left">
                     <h4 className="font-bold">{testimonial.name}</h4>
-                    <p className="text-white/70">{testimonial.company}</p>
+                    <p className="text-white/70 text-sm md:text-base">{testimonial.company}</p>
                   </div>
                 </div>
               </div>
@@ -130,11 +132,11 @@ const Testimonials = () => {
             ))}
           </div>
           
-          <div className="mt-12 flex flex-wrap justify-center gap-8">
-            <img src="https://cdn.freebiesupply.com/logos/large/2x/nestle-4-logo-png-transparent.png" alt="Client Logo" className="h-12 grayscale hover:grayscale-0 transition-all duration-300" />
-            <img src="https://cdn.freebiesupply.com/logos/large/2x/unilever-logo-png-transparent.png" alt="Client Logo" className="h-12 grayscale hover:grayscale-0 transition-all duration-300" />
-            <img src="https://cdn.freebiesupply.com/logos/large/2x/kraft-logo-png-transparent.png" alt="Client Logo" className="h-12 grayscale hover:grayscale-0 transition-all duration-300" />
-            <img src="https://cdn.freebiesupply.com/logos/large/2x/general-mills-logo-png-transparent.png" alt="Client Logo" className="h-12 grayscale hover:grayscale-0 transition-all duration-300" />
+          <div className="mt-8 md:mt-12 flex flex-wrap justify-center gap-6 md:gap-8">
+            <img src="https://cdn.freebiesupply.com/logos/large/2x/nestle-4-logo-png-transparent.png" alt="Client Logo" className="h-8 md:h-12 grayscale hover:grayscale-0 transition-all duration-300" />
+            <img src="https://cdn.freebiesupply.com/logos/large/2x/unilever-logo-png-transparent.png" alt="Client Logo" className="h-8 md:h-12 grayscale hover:grayscale-0 transition-all duration-300" />
+            <img src="https://cdn.freebiesupply.com/logos/large/2x/kraft-logo-png-transparent.png" alt="Client Logo" className="h-8 md:h-12 grayscale hover:grayscale-0 transition-all duration-300" />
+            <img src="https://cdn.freebiesupply.com/logos/large/2x/general-mills-logo-png-transparent.png" alt="Client Logo" className="h-8 md:h-12 grayscale hover:grayscale-0 transition-all duration-300" />
           </div>
         </div>
       </div>
