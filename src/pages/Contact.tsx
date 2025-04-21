@@ -179,7 +179,7 @@ const Contact = () => {
                     <h3 className="font-bold mb-1">WhatsApp Business</h3>
                     <p className="text-gray-600">
                       <a
-                        href="https://wa.me/919876543210"
+                        href="https://wa.me/919879896791"
                         className="hover:text-primary transition-colors"
                       >
                         +91 9879896791
@@ -422,7 +422,7 @@ const Contact = () => {
 
       {/* WhatsApp Float Button */}
       <a
-        href="https://wa.me/919876543210"
+        href="https://wa.me/919879896791"
         className="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-colors z-50"
         aria-label="Chat on WhatsApp"
       >
