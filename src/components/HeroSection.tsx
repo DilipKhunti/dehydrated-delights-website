@@ -15,7 +15,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section className={`relative ${isMobile ? 'h-[50vh] pt-16' : 'h-screen'} flex items-center justify-center overflow-hidden`}>
+    <section className={`relative ${isMobile ? 'h-[50vh]' : 'h-screen'} flex items-center justify-center overflow-hidden`}>
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 w-full h-full">
         <div className="absolute inset-0 bg-black/50 z-10"></div>
