@@ -10,25 +10,25 @@ interface CounterProps {
 const certifications = [
   {
     name: "FSSAI Certified",
-    logo: "./photos/fssai.png",
+    logo: "./images/certificate-fssai.webp",
     tooltip:
       "Food Safety and Standards Authority of India certification ensures our products meet strict food safety standards.",
   },
   {
     name: "ISO 22000:2018",
-    logo: "./photos/iso.png",
+    logo: "./images/certificate-iso.webp",
     tooltip:
       "International Organization for Standardization certification for our food safety management system.",
   },
   {
     name: "HACCP Certified",
-    logo: "./photos/haccp.png",
+    logo: "./images/certificate-haccp.webp",
     tooltip:
       "Hazard Analysis Critical Control Point system ensures food safety throughout our production process.",
   },
   {
     name: "Organic Certified",
-    logo: "./photos/organic.jpg",
+    logo: "./images/certificate-organic.webp",
     tooltip:
       "Our organic products are certified to meet international organic standards.",
   },

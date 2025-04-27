@@ -20,7 +20,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 w-full h-full">
         <div className="absolute inset-0 bg-black/50 z-10"></div>
         <img 
-          src="/photos/onion.jpg"
+          src="/images/hero.webp"
           alt="Dehydrated food ingredients" 
           className="w-full h-full object-cover object-center"
         />

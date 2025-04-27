@@ -32,27 +32,27 @@ const timelineEvents = [
 const facilities = [
   {
     title: "Hare Krishna 1",
-    image: "./photos/HK1.jpg",
+    image: "./images/facility-1.webp",
   },
   {
     title: "Hare Krishna 2",
-    image: "./photos/HK2.jpg",
+    image: "./images/facility-2.webp",
   },
   {
     title: "Hare Krishna 3",
-    image: "./photos/HK3.jpg",
+    image: "./images/facility-3.webp",
   },
   {
     title: "Hare Krishna 4",
-    image: "./photos/HK4.jpg",
+    image: "./images/facility-4.webp",
   },
   {
     title: "Hare Krishna 5",
-    image: "./photos/HK5.jpg",
+    image: "./images/facility-5.webp",
   },
   {
     title: "Hare Krishna 6",
-    image: "./photos/HK6.jpg",
+    image: "./images/facility-6.webp",
   },
 ];
 

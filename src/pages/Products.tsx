@@ -35,7 +35,7 @@ const products: Product[] = [
     description:
       "Dehydrated onion flakes with a rich flavor, perfect for soups and sauces.",
     shelfLife: "18 months",
-    image: "./photos/onion-product.jpg",
+    image: "./images/product-onion.webp",
   },
   {
     id: 3,
@@ -46,7 +46,7 @@ const products: Product[] = [
     description:
       "Whole Dehydrated garlic cloves, ideal for seasoning and flavoring dishes.",
     shelfLife: "24 months",
-    image: "./photos/garlic-product.jpg",
+    image: "./images/product-garlic.webp",
   },
 ];
 
@@ -284,7 +284,7 @@ const Products = () => {
             </div>
             <div className="md:w-1/2">
               <img
-                src="./photos/onion-product.jpg"
+                src="./images/product-onion.webp"
                 alt="Dried Onions"
                 loading="lazy"
                 className="rounded-xl shadow-lg"
@@ -316,7 +316,7 @@ const Products = () => {
             </div>
             <div className="md:w-1/2">
               <img
-                src="./photos/garlic-product.jpg"
+                src="./images/product-garlic.webp"
                 alt="Dehydrated Garlic"
                 loading="lazy"
                 className="rounded-xl shadow-lg"

@@ -26,7 +26,7 @@ const certifications: Certification[] = [
       "Guarantees products are safe for consumption",
       "License Number: 10012345678910",
     ],
-    downloadLink: "./photos/fssai.png",
+    downloadLink: "./images/certificate-fssai.webp",
   },
   {
     id: 2,
@@ -40,7 +40,7 @@ const certifications: Certification[] = [
       "Includes HACCP principles and prerequisites",
       "Certificate Number: ISO22000-IN-12345",
     ],
-    downloadLink: "./photos/iso.png",
+    downloadLink: "./images/certificate-iso.webp",
   },
   {
     id: 3,
@@ -54,7 +54,7 @@ const certifications: Certification[] = [
       "Preventive approach to food safety",
       "Certification Number: HACCP-2022-7890",
     ],
-    downloadLink: "./photos/haccp.png",
+    downloadLink: "./images/certificate-haccp.webp",
   },
   {
     id: 4,
@@ -68,7 +68,7 @@ const certifications: Certification[] = [
       "Annual inspections of our organic production line",
       "Certificate Number: ORG-12345678",
     ],
-    downloadLink: "./photos/organic.jpg",
+    downloadLink: "./images/certificate-organic.webp",
   },
 ];
 
@@ -231,7 +231,7 @@ const Certifications = () => {
 
                 <div className="md:w-5/12 md:pl-12 order-3">
                   <img
-                    src="photos/image1.jpg"
+                    src="./images/process-1.webp"
                     alt="Raw Material Sourcing"
                     className="rounded-lg shadow-md mt-4 md:mt-0"
                   />
@@ -258,7 +258,7 @@ const Certifications = () => {
 
                 <div className="md:w-5/12 md:pr-12 order-3">
                   <img
-                    src="photos/image6.jpg"
+                    src="./images/process-2.webp"
                     alt="Inspection & Washing"
                     className="rounded-lg shadow-md mt-4 md:mt-0"
                   />
@@ -284,7 +284,7 @@ const Certifications = () => {
 
                 <div className="md:w-5/12 md:pl-12 order-3">
                   <img
-                    src="photos/image3.jpg"
+                    src="./images/process-3.webp"
                     alt="Preparation & Cutting"
                     className="rounded-lg shadow-md mt-4 md:mt-0"
                   />
@@ -310,7 +310,7 @@ const Certifications = () => {
 
                 <div className="md:w-5/12 md:pr-12 order-3">
                   <img
-                    src="photos/process.jpg"
+                    src="./images/process-4.webp"
                     alt="Dehydration Process"
                     className="rounded-lg shadow-md mt-4 md:mt-0"
                   />
@@ -336,7 +336,7 @@ const Certifications = () => {
 
                 <div className="md:w-5/12 md:pl-12 order-3">
                   <img
-                    src="photos/image7.jpg"
+                    src="./images/process-5.webp"
                     alt="Quality Testing"
                     className="rounded-lg shadow-md mt-4 md:mt-0"
                   />
@@ -362,7 +362,7 @@ const Certifications = () => {
 
                 <div className="md:w-5/12 md:pr-12 order-3">
                   <img
-                    src="photos/image2.jpg"
+                    src="./images/process-6.webp"
                     alt="Packaging & Shipping"
                     className="rounded-lg shadow-md mt-4 md:mt-0"
                   />

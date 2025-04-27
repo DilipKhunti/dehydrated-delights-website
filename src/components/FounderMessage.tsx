@@ -7,7 +7,7 @@ const FounderMessage = () => {
           <div className="relative">
             <div className="relative h-[500px] w-full overflow-hidden rounded-xl shadow-xl">
               <img 
-                src="photos/founder.jpg" 
+                src="images/founder-1.webp" 
                 alt="Founder of Hare Krishna Food" 
                 className="h-full w-full object-cover"
               />
@@ -37,7 +37,7 @@ const FounderMessage = () => {
             </p>
             <div className="flex items-center space-x-4 mb-6">
               <img 
-                src="photos/hari.jpg" 
+                src="images/founder-2.jpg" 
                 alt="Founder" 
                 className="w-16 h-16 rounded-full object-cover"
               />
