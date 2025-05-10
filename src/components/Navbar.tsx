@@ -28,7 +28,7 @@ const Navbar = () => {
           <img 
             src="/lovable-uploads/logo.png" 
             alt="Hare Krishna Food" 
-            className="h-12 md:h-16" 
+            className="h-14 md:h-16" 
           />
         </Link>
 

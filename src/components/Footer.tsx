@@ -16,7 +16,7 @@ const Footer = () => {
               />
             </div>
             <p className="text-gray-300 mb-4">
-              Delivering nature's goodness – one dehydrated slice at a time. Premium dehydrated Onion and Garlic.
+              Delivering nature's goodness – one dehydrated slice at a time. Premium dehydrated fruits, vegetables, and herbs.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-white hover:text-accent transition-colors">
@@ -83,22 +83,22 @@ const Footer = () => {
             <ul className="space-y-2">
               <li>
                 <Link to="/products#fruits" className="text-gray-300 hover:text-accent transition-colors">
-                  Dehydrated onion
+                  Dehydrated Fruits
                 </Link>
               </li>
               <li>
                 <Link to="/products#vegetables" className="text-gray-300 hover:text-accent transition-colors">
-                  Dehydrated garlic
+                  Dehydrated Vegetables
                 </Link>
               </li>
               <li>
                 <Link to="/products#herbs" className="text-gray-300 hover:text-accent transition-colors">
-                  onion powder
+                  Dehydrated Herbs
                 </Link>
               </li>
               <li>
                 <Link to="/products#custom" className="text-gray-300 hover:text-accent transition-colors">
-                  Garlic powder
+                  Custom Solutions
                 </Link>
               </li>
             </ul>

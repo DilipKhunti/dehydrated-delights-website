@@ -29,33 +29,6 @@ const timelineEvents = [
   },
 ];
 
-const facilities = [
-  {
-    title: "Hare Krishna 1",
-    image: "./images/facility-1.webp",
-  },
-  {
-    title: "Hare Krishna 2",
-    image: "./images/facility-2.webp",
-  },
-  {
-    title: "Hare Krishna 3",
-    image: "./images/facility-3.webp",
-  },
-  {
-    title: "Hare Krishna 4",
-    image: "./images/facility-4.webp",
-  },
-  {
-    title: "Hare Krishna 5",
-    image: "./images/facility-5.webp",
-  },
-  {
-    title: "Hare Krishna 6",
-    image: "./images/facility-6.webp",
-  },
-];
-
 const About = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -178,15 +151,48 @@ const About = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {facilities.map((facility, index) => (
-              <div className="rounded-lg overflow-hidden shadow-md h-60">
-                <img
-                  src={facility.image}
-                  alt={facility.title}
-                  className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
-                />
-              </div>
-            ))}
+            <div className="rounded-lg overflow-hidden shadow-md h-60">
+              <img
+                src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?ixlib=rb-1.2.1&auto=format&fit=crop&q=80&w=500&h=300"
+                alt="Production Facility"
+                className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+              />
+            </div>
+            <div className="rounded-lg overflow-hidden shadow-md h-60">
+              <img
+                src="https://images.unsplash.com/photo-1581093588401-fbb62a02f120?ixlib=rb-1.2.1&auto=format&fit=crop&q=80&w=500&h=300"
+                alt="Quality Control Lab"
+                className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+              />
+            </div>
+            <div className="rounded-lg overflow-hidden shadow-md h-60">
+              <img
+                src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&auto=format&fit=crop&q=80&w=500&h=300"
+                alt="Dehydration Process"
+                className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+              />
+            </div>
+            <div className="rounded-lg overflow-hidden shadow-md h-60">
+              <img
+                src="https://images.unsplash.com/photo-1595257841889-eca2678454e2?ixlib=rb-1.2.1&auto=format&fit=crop&q=80&w=500&h=300"
+                alt="Packaging Area"
+                className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+              />
+            </div>
+            <div className="rounded-lg overflow-hidden shadow-md h-60">
+              <img
+                src="https://images.unsplash.com/photo-1535295972055-1c762f4483e5?ixlib=rb-1.2.1&auto=format&fit=crop&q=80&w=500&h=300"
+                alt="Storage Warehouse"
+                className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+              />
+            </div>
+            <div className="rounded-lg overflow-hidden shadow-md h-60">
+              <img
+                src="https://images.unsplash.com/photo-1634141613544-01dd9983d3b4?ixlib=rb-1.2.1&auto=format&fit=crop&q=80&w=500&h=300"
+                alt="R&D Department"
+                className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+              />
+            </div>
           </div>
         </div>
       </section>

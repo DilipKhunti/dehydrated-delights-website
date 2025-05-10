@@ -5,6 +5,9 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import {
   ShoppingBag,
+  Leaf,
+  Apple,
+  ChevronRight,
   Filter,
   Send,
 } from "lucide-react";
@@ -17,7 +20,7 @@ import {
 interface Product {
   id: number;
   name: string;
-  category: "vegetable";
+  category: "fruit" | "vegetable" | "herb";
   form: "flakes" | "powder" | "whole";
   packaging: "bulk" | "retail" | "both";
   description: string;
@@ -35,18 +38,19 @@ const products: Product[] = [
     description:
       "Dehydrated onion flakes with a rich flavor, perfect for soups and sauces.",
     shelfLife: "18 months",
-    image: "./images/product-onion.webp",
+    image:
+      "https://5.imimg.com/data5/SELLER/Default/2023/2/PJ/UR/MJ/10198027/dehydrated-onion-flakes-ginny-food-500x500.jpg",
   },
   {
     id: 3,
     name: "Dehydrated Garlic",
-    category: "vegetable",
+    category: "herb",
     form: "whole",
     packaging: "both",
     description:
       "Whole Dehydrated garlic cloves, ideal for seasoning and flavoring dishes.",
     shelfLife: "24 months",
-    image: "./images/product-garlic.webp",
+    image: "https://www.jalaramagri.com/wp-content/uploads/2019/09/img1.png",
   },
 ];
 
@@ -56,6 +60,7 @@ const Products = () => {
 
   const [activeProducts, setActiveProducts] = useState<Product[]>(products);
   const [filters, setFilters] = useState({
+    category: "all",
     form: "all",
     packaging: "all",
   });
@@ -63,12 +68,33 @@ const Products = () => {
   const location = useLocation();
 
   useEffect(() => {
-    setActiveProducts(products);
-    setFilters({
-      form: "all",
-      packaging: "all",
-    });
-  }, []);
+    if (location.hash) {
+      const id = location.hash.substring(1);
+
+      setTimeout(() => {
+        const element = document.getElementById(id);
+        if (element) {
+          const yOffset = -100;
+          const y =
+            element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+          window.scrollTo({ top: y, behavior: "smooth" });
+
+          if (id === "fruits" || id === "vegetables" || id === "herbs") {
+            const categoryMap: Record<string, string> = {
+              fruits: "fruit",
+              vegetables: "vegetable",
+              herbs: "herb",
+            };
+
+            setFilters({
+              ...filters,
+              category: categoryMap[id] || "all",
+            });
+          }
+        }
+      }, 500);
+    }
+  }, [location.hash]);
 
   useEffect(() => {
     filterProducts();
@@ -76,6 +102,12 @@ const Products = () => {
 
   const filterProducts = () => {
     let filtered = [...products];
+
+    if (filters.category !== "all") {
+      filtered = filtered.filter(
+        (product) => product.category === filters.category
+      );
+    }
 
     if (filters.form !== "all") {
       filtered = filtered.filter((product) => product.form === filters.form);
@@ -107,7 +139,18 @@ const Products = () => {
     });
   };
 
-  const getCategoryIcon = () => <ShoppingBag size={16} />;
+  const getCategoryIcon = (category: string) => {
+    switch (category) {
+      case "fruit":
+        return <Apple size={16} />;
+      case "vegetable":
+        return <ShoppingBag size={16} />;
+      case "herb":
+        return <Leaf size={16} />;
+      default:
+        return <ShoppingBag size={16} />;
+    }
+  };
 
   return (
     <div className="min-h-screen overflow-x-hidden w-full">
@@ -120,7 +163,9 @@ const Products = () => {
               Our Product Catalog
             </h1>
             <p className="text-xl text-white/90 mb-8">
-              Explore our comprehensive range of premium dehydrated vegetables, available in various forms and packaging options to meet your specific needs.
+              Explore our comprehensive range of premium dehydrated fruits,
+              vegetables, and herbs, available in various forms and packaging
+              options to meet your specific needs.
             </p>
           </div>
         </div>
@@ -129,12 +174,37 @@ const Products = () => {
       <section className="py-8 bg-cream border-b animate-on-scroll">
         <div className="container-wide">
           <div className="flex flex-wrap justify-center gap-6">
-            <span
-              className="bg-secondary/10 px-6 py-3 rounded-full text-primary font-medium flex items-center gap-2"
+            <a
+              href="#fruits"
+              className="bg-secondary/10 hover:bg-secondary/20 px-6 py-3 rounded-full text-primary font-medium transition-colors flex items-center gap-2"
+              onClick={() => handleFilterChange("category", "fruit")}
+            >
+              <Apple size={18} />
+              Dehydrated Fruits
+            </a>
+            <a
+              href="#vegetables"
+              className="bg-secondary/10 hover:bg-secondary/20 px-6 py-3 rounded-full text-primary font-medium transition-colors flex items-center gap-2"
+              onClick={() => handleFilterChange("category", "vegetable")}
             >
               <ShoppingBag size={18} />
               Dehydrated Vegetables
-            </span>
+            </a>
+            <a
+              href="#herbs"
+              className="bg-secondary/10 hover:bg-secondary/20 px-6 py-3 rounded-full text-primary font-medium transition-colors flex items-center gap-2"
+              onClick={() => handleFilterChange("category", "herb")}
+            >
+              <Leaf size={18} />
+              Dehydrated Herbs
+            </a>
+            <a
+              href="#custom"
+              className="bg-highlight/10 hover:bg-highlight/20 px-6 py-3 rounded-full text-highlight font-medium transition-colors flex items-center gap-2"
+            >
+              <Filter size={18} />
+              Custom Solutions
+            </a>
           </div>
         </div>
       </section>
@@ -146,7 +216,25 @@ const Products = () => {
               <Filter size={20} className="text-primary" />
               Filter Products
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Product Type
+                </label>
+                <select
+                  className="w-full p-2 border border-gray-300 rounded-md focus:ring-primary focus:border-primary"
+                  value={filters.category}
+                  onChange={(e) =>
+                    handleFilterChange("category", e.target.value)
+                  }
+                >
+                  <option value="all">All Types</option>
+                  <option value="fruit">Fruits</option>
+                  <option value="vegetable">Vegetables</option>
+                  <option value="herb">Herbs</option>
+                </select>
+              </div>
+
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
                   Product Form
@@ -162,6 +250,7 @@ const Products = () => {
                   <option value="whole">Whole</option>
                 </select>
               </div>
+
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
                   Packaging Options
@@ -196,7 +285,6 @@ const Products = () => {
                     <img
                       src={product.image}
                       alt={product.name}
-                      loading="lazy"
                       className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                     />
                   </div>
@@ -205,8 +293,9 @@ const Products = () => {
                     <div className="flex justify-between items-start mb-2">
                       <h3 className="text-xl font-bold">{product.name}</h3>
                       <span className="bg-secondary/10 text-primary text-xs px-2 py-1 rounded-full flex items-center gap-1">
-                        {getCategoryIcon()}
-                        Vegetables
+                        {getCategoryIcon(product.category)}
+                        {product.category.charAt(0).toUpperCase() +
+                          product.category.slice(1)}
                       </span>
                     </div>
 
@@ -252,7 +341,7 @@ const Products = () => {
               </p>
               <Button
                 onClick={() =>
-                  setFilters({ form: "all", packaging: "all" })
+                  setFilters({ category: "all", form: "all", packaging: "all" })
                 }
                 className="bg-primary text-white px-4 py-2 rounded-md font-medium hover:bg-primary/90 transition-colors"
               >
@@ -267,7 +356,7 @@ const Products = () => {
         <div className="container-wide">
           <div className="flex flex-col md:flex-row gap-8 items-center">
             <div className="md:w-1/2">
-              <h2 className="text-3xl font-bold mb-4">Dehydrated Onions</h2>
+              <h2 className="text-3xl font-bold mb-4">Dehytrated Onions</h2>
               <p className="text-gray-600 mb-4">
                 Our high-quality dried onions deliver a strong, natural flavor
                 and aroma. Ideal for culinary applications where convenience and
@@ -281,12 +370,17 @@ const Products = () => {
                   Perfect for soups, sauces, spice blends, and ready meals
                 </li>
               </ul>
+              <button
+                onClick={() => handleFilterChange("category", "onion")}
+                className="bg-primary text-white px-6 py-3 rounded-md font-medium hover:bg-primary/90 transition-colors"
+              >
+                View Onion Products
+              </button>
             </div>
             <div className="md:w-1/2">
               <img
-                src="./images/product-onion.webp"
+                src="https://5.imimg.com/data5/SELLER/Default/2023/2/PJ/UR/MJ/10198027/dehydrated-onion-flakes-ginny-food-500x500.jpg"
                 alt="Dried Onions"
-                loading="lazy"
                 className="rounded-xl shadow-lg"
               />
             </div>
@@ -313,14 +407,81 @@ const Products = () => {
                   Perfect for seasoning blends, sauces, ready meals, and more
                 </li>
               </ul>
+              <button
+                onClick={() => handleFilterChange("category", "garlic")}
+                className="bg-primary text-white px-6 py-3 rounded-md font-medium hover:bg-primary/90 transition-colors"
+              >
+                View Garlic Products
+              </button>
             </div>
             <div className="md:w-1/2">
               <img
-                src="./images/product-garlic.webp"
+                src="https://www.jalaramagri.com/wp-content/uploads/2019/09/img1.png"
                 alt="Dehydrated Garlic"
-                loading="lazy"
                 className="rounded-xl shadow-lg"
               />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="custom"
+        className="py-16 bg-highlight text-white animate-on-scroll"
+      >
+        <div className="container-wide">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Custom Solutions
+            </h2>
+            <p className="text-xl">
+              Can't find exactly what you need? We offer custom dehydration
+              solutions to meet your specific requirements.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
+              <h3 className="text-xl font-bold mb-4">Custom Blends</h3>
+              <p className="text-white/80 mb-4">
+                We can create proprietary blends of dehydrated fruits,
+                vegetables, and herbs according to your specific recipe or
+                requirements.
+              </p>
+              <a
+                href="/contact"
+                className="text-white font-medium hover:underline"
+              >
+                Request Custom Blend →
+              </a>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
+              <h3 className="text-xl font-bold mb-4">Special Cuts & Sizes</h3>
+              <p className="text-white/80 mb-4">
+                If you need specific shapes, sizes, or cuts that aren't in our
+                standard offering, we can accommodate your requirements.
+              </p>
+              <a
+                href="/contact"
+                className="text-white font-medium hover:underline"
+              >
+                Discuss Special Requirements →
+              </a>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
+              <h3 className="text-xl font-bold mb-4">Custom Packaging</h3>
+              <p className="text-white/80 mb-4">
+                From bulk industrial packaging to branded retail solutions, we
+                offer flexible packaging options to suit your business needs.
+              </p>
+              <a
+                href="/contact"
+                className="text-white font-medium hover:underline"
+              >
+                Explore Packaging Options →
+              </a>
             </div>
           </div>
         </div>
